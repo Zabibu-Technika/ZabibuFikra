@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zabibu — Weaver, Arif Agent, and Fikra</title>
+<meta name="description" content="Three doors into the Zabibu stack: Weaver the coding agent, Zabibu Arif / Arif Agent the multi-axis workspace, and Fikra the model family.">
+<meta name="theme-color" content="#070708">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .hub-hero { min-height: calc(100vh - 62px); display: grid; place-items: center; padding: clamp(56px, 9vw, 120px) 0; }
+  .hub-hero .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .hub-hero .hero-copy { max-width: 920px; margin: 0 auto; }
+  .hub-hero .eyebrow { justify-content: center; }
+  .hub-hero .lede { margin-left: auto; margin-right: auto; }
+  .hub-hero h1 { font-size: clamp(52px, 8.6vw, 112px); }
+  .hub-hero .cta { justify-content: center; }
+  .hub-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .hub-grid .portal { min-height: 300px; }
+  .hub-grid .portal-media img { aspect-ratio: 16 / 9; object-fit: cover; }
+  .hub-terminal { margin-top: 18px; border-radius: 1.25rem; }
+  .hub-terminal pre { font-size: 10.5px; padding: 16px 18px; }
+  @media (max-width: 920px) {
+    .hub-grid { grid-template-columns: 1fr 1fr; }
+    .hub-grid .portal.featured { grid-column: 1 / -1; }
+  }
+  @media (max-width: 680px) {
+    .hub-grid { grid-template-columns: 1fr; }
+    .hub-grid .portal.featured { grid-column: auto; }
+  }
+</style>
+</head>
+<body>
+<div class="ambient" aria-hidden="true">
+  <img src="assets/bg.jpg" srcset="assets/bg-sm.jpg 1100w, assets/bg.jpg 1920w" sizes="100vw" alt="">
+  <div class="veil"></div>
+</div>
+<div class="noise" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="./">
+      <img src="assets/logo.png" alt="">
+      <span class="brand-sep" aria-hidden="true"></span>
+      <span class="brand-product">Zabibu<small>The stack</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#ecosystem">Ecosystem</a>
+      <a href="https://zabibu.vercel.app">Company</a>
+      <a href="https://github.com/Zabibu-Technika/zabibu">Source</a>
+    </nav>
+    <div class="header-actions">
+      <a class="glow-button small" href="#ecosystem">Enter the hub <span class="arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero hub-hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> Zabibu Technika · Nairobi</p>
+        <h1>Many doors.<br><span class="text-gradient">One living stack.</span></h1>
+        <p class="lede">
+          Weaver proves the code. Zabibu Arif runs the work. Fikra is the model underneath both.
+          Three products, one verified core, built for the hardware people actually have.
+        </p>
+        <div class="cta">
+          <a class="glow-button" href="#ecosystem">Enter the hub <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="outline-button" href="https://zabibu.vercel.app">What is Zabibu?</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ecosystem" class="section">
+    <div class="section-head">
+      <p class="eyebrow">The hub</p>
+      <h2>Three doors. <span class="text-gradient">One verified core.</span></h2>
+    </div>
+
+    <div class="hub-grid">
+      <a class="portal featured" href="https://arifagent.vercel.app">
+        <div>
+          <div class="portal-top"><span class="tag purple">Flagship / Multi-axis</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <div class="portal-media"><img src="assets/arif.png" alt="Zabibu Arif dashboard"></div>
+          <h3>Zabibu Arif · Arif Agent</h3>
+          <p>Code, growth, and business operations on one core. A real dashboard, multiple sign-ins, and the same proof on every axis.</p>
+        </div>
+      </a>
+
+      <a class="portal" href="https://zabibweaver.vercel.app">
+        <div>
+          <div class="portal-top"><span class="tag teal">Mono-axis / Open source</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <h3>Weaver</h3>
+          <p>The coding agent that proves it's done. Proof receipts, a deterministic gate, decision memory, and undo without git.</p>
+          <div class="terminal hub-terminal" aria-hidden="true">
+            <div class="terminal-bar"><span></span><span></span><span></span><span class="title">weaver — proof</span></div>
+            <pre><span class="amber">[ proof ]</span> <span class="ok">proved — 3/3 checks passed</span>
+<span class="dim">  .weaver/receipts/20261104T185800838-zbyxm.md</span></pre>
+          </div>
+        </div>
+      </a>
+
+      <a class="portal" href="https://zabibufikra.vercel.app">
+        <div>
+          <div class="portal-top"><span class="tag amber">Models / Open weights</span><span class="arrow" aria-hidden="true">↗</span></div>
+          <div class="portal-media"><img src="sites/fikra/assets/fikra.png" alt="Zabibu Fikra 2B model card"></div>
+          <h3>Fikra</h3>
+          <p>Coder, Reason, and Edge — models sized to the language, the bandwidth, and the machine people actually have.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="manifesto">
+      <p class="eyebrow">Why we build</p>
+      <h2>Technology with Nairobi in its <span class="text-gradient">nervous system.</span></h2>
+      <p class="copy">Tools that respect context. They work on the hardware people have, remain useful when connectivity disappears, and leave room for local imagination.</p>
+      <a class="glow-button" href="https://zabibu.vercel.app">Read the full story <span class="arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="Zabibu Technika">
+      <p>Sovereign, local-first software from Nairobi for the global South.</p>
+      <p class="footer-loc">Nairobi, Kenya / East Africa</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Ecosystem</p>
+      <a href="https://zabibweaver.vercel.app">Weaver</a>
+      <a href="https://arifagent.vercel.app">Zabibu Arif</a>
+      <a href="https://zabibufikra.vercel.app">Fikra</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Company</p>
+      <a href="https://zabibu.vercel.app">Zabibu Technika</a>
+      <a href="https://github.com/Zabibu-Technika/zabibu">GitHub</a>
+      <a href="https://github.com/Zabibu-Technika/zabibu/blob/main/Zabibu%20Weaver/LICENSE">MIT license</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Product</p>
+      <a href="https://zabibweaver.vercel.app">Proof</a>
+      <a href="https://arifagent.vercel.app">Axes</a>
+      <a href="https://zabibufikra.vercel.app">Models</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Zabibu Technika. All rights reserved.</span>
+    <span class="mono">Designed from Nairobi.</span>
+  </div>
+</footer>
+</body>
+</html>

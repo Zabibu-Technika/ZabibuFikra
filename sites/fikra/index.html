@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fikra — models for the machines people actually have</title>
+<meta name="description" content="Fikra is the model family behind Zabibu's agents: Coder, Reason, and Edge. Built around the language tax, low bandwidth, and devices that are not new.">
+<meta name="theme-color" content="#070708">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient" aria-hidden="true">
+  <img src="assets/bg.jpg" srcset="assets/bg-sm.jpg 1100w, assets/bg.jpg 1920w" sizes="100vw" alt="">
+  <div class="veil"></div>
+</div>
+<div class="noise" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="./">
+      <img src="assets/logo.png" alt="">
+      <span class="brand-sep" aria-hidden="true"></span>
+      <span class="brand-product">Fikra<small>Zabibu models</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#models">Models</a>
+      <a href="#language">Language</a>
+      <a href="#where">Where it runs</a>
+      <a href="#agents">Agents</a>
+    </nav>
+    <div class="header-actions">
+      <a class="glow-button small" href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Model card <span class="arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> The model family behind Zabibu's agents</p>
+        <h1>Models for the machines <span class="text-gradient">people actually have.</span></h1>
+        <p class="lede">
+          Fikra is built around three constraints most model families treat as an afterthought:
+          the tokenizer tax on African languages, a network that is not free, and a device that
+          is not new. Coder, Reason, and Edge. One family, sized to the work.
+        </p>
+        <div class="cta">
+          <a class="glow-button" href="#models">Meet the models <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="outline-button" href="#language">The language problem</a>
+        </div>
+        <p class="hero-meta">Coder <span>·</span> Reason <span>·</span> Edge <span>·</span> open weights</p>
+      </div>
+
+      <div class="hero-visual">
+        <figure class="showcase">
+          <img src="assets/fikra.png" alt="Zabibu Fikra 2B model card on Hugging Face, with the Zabibu Fikra logo and model metadata" width="1855" height="843">
+          <figcaption class="showcase-caption"><span><span class="dot">●</span> Zabibu Fikra 2B</span><span>Open weights</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stats-inner">
+      <div class="stat"><strong>1.88×</strong><span>median tokenizer premium</span></div>
+      <div class="stat"><strong>7.4×</strong><span>Amharic on English vocabularies</span></div>
+      <div class="stat"><strong>8.92×</strong><span>N'Ko, the worst case measured</span></div>
+      <div class="stat"><strong>4 GB</strong><span>the Edge target</span></div>
+    </div>
+  </div>
+
+  <section id="models" class="section">
+    <div class="section-head">
+      <p class="eyebrow">The family</p>
+      <h2>Three shapes. <span class="text-gradient">One protocol.</span></h2>
+    </div>
+    <div class="grid three">
+      <article class="portal">
+        <div>
+          <div class="portal-top"><span class="tag purple">Coder</span></div>
+          <h3>Code that finishes</h3>
+          <p>Read, edit, search, run, verify. Coder is trained for the shape of an agent loop: small, frequent tool calls, exact edits, and a passing test suite as the finish line.</p>
+          <p>Tiered Edge → Core → Pro. Tool calls at every size. Diff-aware editing.</p>
+        </div>
+      </article>
+      <article class="portal">
+        <div>
+          <div class="portal-top"><span class="tag teal">Reason</span></div>
+          <h3>Plans that hold</h3>
+          <p>Reason handles the work around the code: reading a brief, structuring a plan, weighing trade-offs, and saying “I am not sure” when the evidence is thin.</p>
+          <p>Long effective context. Structured output. Calibrated refusal.</p>
+        </div>
+      </article>
+      <article class="portal">
+        <div>
+          <div class="portal-top"><span class="tag amber">Edge</span></div>
+          <h3>Small enough to keep</h3>
+          <p>Edge is the answer to “my laptop has 4 GB and the network is metered.” Quantized, local, and designed to run with no account and no cloud in the loop.</p>
+          <p>4 GB devices. Offline after download. Battery-aware inference.</p>
+        </div>
+      </article>
+    </div>
+    <p class="fine">Model cards, quantization options, and benchmarks are published with each release. No number here is a promise about a model that has not shipped.</p>
+  </section>
+
+  <section class="band">
+    <div id="language" class="section">
+      <div class="section-head">
+        <p class="eyebrow">The language tax</p>
+        <h2>The same meaning should not cost <span class="text-gradient">seven times more.</span></h2>
+        <p class="copy">
+          Tokenizers assign more subword tokens to the same meaning in some languages than in
+          others. Measured across 20 African languages, the median premium over English is
+          <strong>1.88×</strong>; Amharic reaches <strong>7.4×</strong> and N'Ko
+          <strong>8.92×</strong>. A model with a nominal 128k window can leave an Amharic
+          speaker with roughly <strong>11%</strong> of the effective context an English speaker
+          gets. Fikra treats that as a model-design constraint, not a footnote.
+        </p>
+      </div>
+      <div class="grid three">
+        <article class="portal">
+          <div>
+            <div class="portal-top"><span class="tag purple">Context</span></div>
+            <h3>Measured in effective tokens</h3>
+            <p>Context budgets, compaction, and pricing are stated in the space a language actually consumes. A budget that assumes English is a budget that runs out silently.</p>
+          </div>
+        </article>
+        <article class="portal">
+          <div>
+            <div class="portal-top"><span class="tag teal">Vocabulary</span></div>
+            <h3>Vocabulary that fits the script</h3>
+            <p>Ethiopic and N'Ko are not edge cases. The tokenizer is part of the model, and it is evaluated per language, not per average.</p>
+          </div>
+        </article>
+        <article class="portal">
+          <div>
+            <div class="portal-top"><span class="tag amber">Latency</span></div>
+            <h3>Latency you can plan around</h3>
+            <p>Generation cost follows tokens. If the tokenizer is expensive, the answer is slow and the data bill is higher. That is a product decision, not a benchmark detail.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="where" class="section">
+    <div class="section-head">
+      <p class="eyebrow">Where it runs</p>
+      <h2>Local first. Account optional. <span class="text-gradient">Power-cut safe.</span></h2>
+    </div>
+    <div class="grid three">
+      <article class="portal">
+        <div>
+          <div class="portal-top"><span class="tag teal">On device</span></div>
+          <h3>On the device</h3>
+          <p>Edge runs through Ollama or a local runtime. After the download, nothing has to leave the machine.</p>
+        </div>
+      </article>
+      <article class="portal">
+        <div>
+          <div class="portal-top"><span class="tag amber">Metered</span></div>
+          <h3>On a metered link</h3>
+          <p>Small models, compact prompts, and no mandatory telemetry. The agent should not cost more to run than the work is worth.</p>
+        </div>
+      </article>
+      <article class="portal">
+        <div>
+          <div class="portal-top"><span class="tag purple">Resilient</span></div>
+          <h3>After the lights come back</h3>
+          <p>Ledgers and checkpoints are written to survive an interrupted write. A half-written line costs one entry, not the session.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="receipt" aria-label="Published model specifications">
+      <div class="receipt-head"><span class="badge ok">open release</span><span>Zabibu-Fikra-2B · model card</span></div>
+      <table>
+        <thead><tr><th>field</th><th>value</th></tr></thead>
+        <tbody>
+          <tr><td>parameters</td><td>5B</td></tr>
+          <tr><td>precision</td><td>BF16</td></tr>
+          <tr><td>languages</td><td>English · Swahili</td></tr>
+          <tr><td>modality</td><td>Image-text-to-text</td></tr>
+          <tr><td>license</td><td>Zabibu Technika license</td></tr>
+        </tbody>
+      </table>
+      <p class="fine"><a href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Read the model card on Hugging Face</a> · specifications follow the published card.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div id="agents" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Use it with</p>
+        <h2>Fikra is the model. The agents are <span class="text-gradient">where it works.</span></h2>
+      </div>
+      <div class="grid two">
+        <a class="portal featured" href="https://arifagent.vercel.app">
+          <div>
+            <div class="portal-top"><span class="tag purple">Multi-axis</span><span class="arrow" aria-hidden="true">↗</span></div>
+            <h3>Zabibu Arif · Arif Agent</h3>
+            <p>Code, growth, and business operations on one verified core. Multiple sign-ins and a real dashboard.</p>
+          </div>
+        </a>
+        <a class="portal" href="https://zabibweaver.vercel.app">
+          <div>
+            <div class="portal-top"><span class="tag teal">Mono-axis</span><span class="arrow" aria-hidden="true">↗</span></div>
+            <h3>Weaver</h3>
+            <p>The open-source coding agent that proves it's done. Proof receipts, a deterministic gate, and undo without git.</p>
+          </div>
+        </a>
+      </div>
+      <div class="cta">
+        <a class="glow-button" href="https://github.com/Zabibu-Technika/zabibu">View the source <span class="arrow" aria-hidden="true">↗</span></a>
+        <a class="outline-button" href="https://arifagent.vercel.app">Meet Arif Agent</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="manifesto">
+      <p class="eyebrow">The constraint</p>
+      <h2>Small enough to <span class="text-gradient">keep.</span></h2>
+      <p class="copy">A model that needs a new laptop, a stable grid, and a free network is not a model for most people. Fikra starts from the machine and the language in front of it.</p>
+      <a class="glow-button" href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Read the model card <span class="arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="Zabibu Technika">
+      <p>Fikra is the model family behind Zabibu's agents. Measured in the language you actually use.</p>
+      <p class="footer-loc">Nairobi, Kenya / East Africa</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Ecosystem</p>
+      <a href="https://zabibweaver.vercel.app">Weaver</a>
+      <a href="https://arifagent.vercel.app">Zabibu Arif</a>
+      <a href="https://zabibufikra.vercel.app">Fikra</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Models</p>
+      <a href="#models">Coder</a>
+      <a href="#models">Reason</a>
+      <a href="#models">Edge</a>
+      <a href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Fikra 2B</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Company</p>
+      <a href="https://zabibu.vercel.app">Zabibu Technika</a>
+      <a href="https://github.com/Zabibu-Technika/zabibu">GitHub</a>
+      <a href="https://github.com/Zabibu-Technika/zabibu/blob/main/Zabibu%20Weaver/LICENSE">MIT license</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Zabibu Technika. All rights reserved.</span>
+    <span class="mono">Designed from Nairobi.</span>
+  </div>
+</footer>
+</body>
+</html>
