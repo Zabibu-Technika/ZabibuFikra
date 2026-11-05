@@ -3,3 +3,7 @@ node_modules/
 .DS_Store
 Thumbs.db
 *.log
+
+# Local working files, not website content.
+AI_Workspace/
+building-opencode-clone-with-opencode.json
