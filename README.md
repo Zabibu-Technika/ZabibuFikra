@@ -13,7 +13,7 @@ The product sites live with their products, not here:
 
 | Product | Repository | Site |
 |---|---|---|
-| Weaver | <https://github.com/Zabibu-Technika/ZabibuWeaver> | `site/` → <https://zabibweaver.vercel.app> |
+| Weaver | <https://github.com/Zabibu-Technika/ZabibuWeaver> | `site/` → <https://zabibuweaver.vercel.app> |
 | Zabibu Arif · Arif Agent | <https://github.com/Zabibu-Technika/ArifAgent> | `site/` → <https://arifagent.vercel.app> |
 | Fikra | this repository | `sites/fikra/` → <https://zabibufikra.vercel.app> |
 
