@@ -7,7 +7,8 @@ Fikra.
 
 - `index.html`, `style.css`, `assets/` — the public hub linking Weaver, Zabibu Arif, and Fikra.
 - `sites/fikra/` — the Fikra model-family site, deployed at
-  <https://zabibufikra.vercel.app>.
+  <https://zabibufikra.vercel.app>. It sells the model that exists — Zabibu Fikra Model 1 –
+  2B — and teases Fikra 2 and the Fikra Edge Runtime.
 
 The product sites live with their products, not here:
 

@@ -3,264 +3,368 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fikra — models for the machines people actually have</title>
-<meta name="description" content="Fikra is the model family behind Zabibu's agents: Coder, Reason, and Edge. Built around the language tax, low bandwidth, and devices that are not new.">
-<meta name="theme-color" content="#070708">
+<title>Fikra Model 1 — 2B · small model, deep reasoning</title>
+<meta name="description" content="Zabibu Fikra Model 1 – 2B is an ultra-efficient, reasoning-optimized model built on Gemma-4-2B-it. 131k context, English and Swahili, agentic tool use, Q4_K_M GGUF. Runs locally. Fikra 2 and the Fikra Edge Runtime are coming soon.">
+<meta name="theme-color" content="#050507">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="ambient" aria-hidden="true">
-  <img src="assets/bg.jpg" srcset="assets/bg-sm.jpg 1100w, assets/bg.jpg 1920w" sizes="100vw" alt="">
-  <div class="veil"></div>
-</div>
-<div class="noise" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="./">
-      <img src="assets/logo.png" alt="">
-      <span class="brand-sep" aria-hidden="true"></span>
-      <span class="brand-product">Fikra<small>Zabibu models</small></span>
+      <img class="brand-mark" src="assets/fikra-mark-light.svg" alt="">
+      <span class="brand-word">FIKRA</span>
+      <span class="brand-tag">MODEL 01</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="#models">Models</a>
-      <a href="#language">Language</a>
-      <a href="#where">Where it runs</a>
-      <a href="#agents">Agents</a>
+      <a href="#model">The model</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#run">Run it</a>
+      <a href="#fikra-2">Fikra 2</a>
+      <a href="#edge-runtime">Edge Runtime</a>
     </nav>
     <div class="header-actions">
-      <a class="glow-button small" href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Model card <span class="arrow" aria-hidden="true">↗</span></a>
+      <a class="btn btn-paper btn-sm" href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Get the model <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="hero">
-    <div class="hero-inner">
+    <div class="hero-inner wrap">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> The model family behind Zabibu's agents</p>
-        <h1>Models for the machines <span class="text-gradient">people actually have.</span></h1>
-        <p class="lede">
-          Fikra is built around three constraints most model families treat as an afterthought:
-          the tokenizer tax on African languages, a network that is not free, and a device that
-          is not new. Coder, Reason, and Edge. One family, sized to the work.
+        <p class="hero-eyebrow">ZABIBU FIKRA · MODEL 01 · 2B</p>
+        <h1>Small model.<br><span class="pink-text">Deep reasoning.</span></h1>
+        <p class="hero-lede">
+          An ultra-efficient, reasoning-optimized model built on <strong>Gemma-4-2B-it</strong>
+          and tuned for Pan-African contexts, business agility, and high-density
+          <strong>English–Swahili</strong> code-switching. It runs on the machine in front of you.
         </p>
-        <div class="cta">
-          <a class="glow-button" href="#models">Meet the models <span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="outline-button" href="#language">The language problem</a>
+        <div class="cta-row">
+          <a class="btn btn-paper" href="#model">Read the model card <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline-light" href="#run">Download GGUF</a>
         </div>
-        <p class="hero-meta">Coder <span>·</span> Reason <span>·</span> Edge <span>·</span> open weights</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>2B</strong><span>model class</span></div>
+          <div class="hero-stat"><strong>131K</strong><span>context tokens</span></div>
+          <div class="hero-stat"><strong>EN + SW</strong><span>languages</span></div>
+          <div class="hero-stat"><strong>Q4_K_M</strong><span>GGUF on device</span></div>
+        </div>
       </div>
 
-      <div class="hero-visual">
-        <figure class="showcase">
-          <img src="assets/fikra.png" alt="Zabibu Fikra 2B model card on Hugging Face, with the Zabibu Fikra logo and model metadata" width="1855" height="843">
-          <figcaption class="showcase-caption"><span><span class="dot">●</span> Zabibu Fikra 2B</span><span>Open weights</span></figcaption>
-        </figure>
+      <div class="hero-art" aria-hidden="true">
+        <img class="hero-heart" src="assets/fikra-mark-light.svg" alt="">
+        <span class="art-chip art-chip-a">REASONING / AGENTIC</span>
+        <span class="art-chip art-chip-b">SOVEREIGN / LOCAL</span>
       </div>
     </div>
   </section>
 
-  <div class="stats">
-    <div class="stats-inner">
-      <div class="stat"><strong>1.88×</strong><span>median tokenizer premium</span></div>
-      <div class="stat"><strong>7.4×</strong><span>Amharic on English vocabularies</span></div>
-      <div class="stat"><strong>8.92×</strong><span>N'Ko, the worst case measured</span></div>
-      <div class="stat"><strong>4 GB</strong><span>the Edge target</span></div>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>FIKRA MODEL 01 — 2B</span><em>◆</em><span>131,072 TOKEN CONTEXT</span><em>◆</em><span>ENGLISH + SWAHILI</span><em>◆</em><span>Q4_K_M GGUF</span><em>◆</em><span>LOCAL / SOVEREIGN</span><em>◆</em><span>REASONING + AGENTIC</span><em>◆</em><span>EDGE RUNTIME — COMING SOON</span><em>◆</em>
+      <span>FIKRA MODEL 01 — 2B</span><em>◆</em><span>131,072 TOKEN CONTEXT</span><em>◆</em><span>ENGLISH + SWAHILI</span><em>◆</em><span>Q4_K_M GGUF</span><em>◆</em><span>LOCAL / SOVEREIGN</span><em>◆</em><span>REASONING + AGENTIC</span><em>◆</em><span>EDGE RUNTIME — COMING SOON</span><em>◆</em>
     </div>
   </div>
 
-  <section id="models" class="section">
-    <div class="section-head">
-      <p class="eyebrow">The family</p>
-      <h2>Three shapes. <span class="text-gradient">One protocol.</span></h2>
-    </div>
-    <div class="grid three">
-      <article class="portal">
-        <div>
-          <div class="portal-top"><span class="tag purple">Coder</span></div>
-          <h3>Code that finishes</h3>
-          <p>Read, edit, search, run, verify. Coder is trained for the shape of an agent loop: small, frequent tool calls, exact edits, and a passing test suite as the finish line.</p>
-          <p>Tiered Edge → Core → Pro. Tool calls at every size. Diff-aware editing.</p>
-        </div>
-      </article>
-      <article class="portal">
-        <div>
-          <div class="portal-top"><span class="tag teal">Reason</span></div>
-          <h3>Plans that hold</h3>
-          <p>Reason handles the work around the code: reading a brief, structuring a plan, weighing trade-offs, and saying “I am not sure” when the evidence is thin.</p>
-          <p>Long effective context. Structured output. Calibrated refusal.</p>
-        </div>
-      </article>
-      <article class="portal">
-        <div>
-          <div class="portal-top"><span class="tag amber">Edge</span></div>
-          <h3>Small enough to keep</h3>
-          <p>Edge is the answer to “my laptop has 4 GB and the network is metered.” Quantized, local, and designed to run with no account and no cloud in the loop.</p>
-          <p>4 GB devices. Offline after download. Battery-aware inference.</p>
-        </div>
-      </article>
-    </div>
-    <p class="fine">Model cards, quantization options, and benchmarks are published with each release. No number here is a promise about a model that has not shipped.</p>
-  </section>
-
-  <section class="band">
-    <div id="language" class="section">
+  <section id="model" class="section paper">
+    <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">The language tax</p>
-        <h2>The same meaning should not cost <span class="text-gradient">seven times more.</span></h2>
-        <p class="copy">
-          Tokenizers assign more subword tokens to the same meaning in some languages than in
-          others. Measured across 20 African languages, the median premium over English is
-          <strong>1.88×</strong>; Amharic reaches <strong>7.4×</strong> and N'Ko
-          <strong>8.92×</strong>. A model with a nominal 128k window can leave an Amharic
-          speaker with roughly <strong>11%</strong> of the effective context an English speaker
-          gets. Fikra treats that as a model-design constraint, not a footnote.
-        </p>
+        <p class="eyebrow">The model that exists</p>
+        <h2>Not a demo. <span class="blue-text">A downloadable model.</span></h2>
       </div>
-      <div class="grid three">
-        <article class="portal">
-          <div>
-            <div class="portal-top"><span class="tag purple">Context</span></div>
-            <h3>Measured in effective tokens</h3>
-            <p>Context budgets, compaction, and pricing are stated in the space a language actually consumes. A budget that assumes English is a budget that runs out silently.</p>
+
+      <div class="model-grid">
+        <div class="model-copy">
+          <p class="lead">
+            <strong>Zabibu Fikra Model 1 – 2B</strong> is an ultra-efficient, reasoning-optimized
+            model built on the Gemma-4-2B-it architecture. It was conceptualized, built, and
+            deployed by a solo developer in East Africa, then tuned for Pan-African contexts,
+            business agility, and high-density English–Swahili code-switching.
+          </p>
+          <p class="copy">
+            The model card calls its approach <strong>action-oriented cognitive extraction</strong>.
+            Every instruction is treated as an execution task, not a prompt for polite filler.
+            It is a 2B-class model that runs on the hardware people actually have — local,
+            private, and offline when the network is not there.
+          </p>
+
+          <blockquote class="pull-quote">
+            “Deterministic action over verbose guesswork.”
+            <span>From the Fikra model card</span>
+          </blockquote>
+
+          <p class="copy">
+            It is not trying to win a benchmark for general knowledge. It is trying to be the
+            model you can keep: a small, sharp reasoning engine for business workflows, local
+            agents, and software that has to work from Nairobi to the next town without a
+            reliable connection.
+          </p>
+
+          <div class="fact-row">
+            <span class="fact">Built in East Africa</span>
+            <span class="fact">Fine-tuned with Unsloth</span>
+            <span class="fact">2B-class footprint</span>
+            <span class="fact">Open weights</span>
           </div>
+        </div>
+
+        <aside class="spec-card" aria-label="Fikra Model 1 specifications">
+          <div class="spec-head"><span>MODEL CARD / 01</span><span>ZABIBU TECHNIKA</span></div>
+          <dl>
+            <div class="spec-row"><dt>Model</dt><dd>Zabibu Fikra Model 1 – 2B<small>Zabibu-Fikra-2B on Hugging Face</small></dd></div>
+            <div class="spec-row"><dt>Parameters</dt><dd>5.12B total<small>2B-class footprint</small></dd></div>
+            <div class="spec-row"><dt>Context</dt><dd>131,072 tokens</dd></div>
+            <div class="spec-row"><dt>Languages</dt><dd>English · Swahili</dd></div>
+            <div class="spec-row"><dt>Architecture</dt><dd>Gemma-4-2B-it<small>Gemma 4 E2B · multimodal token space</small></dd></div>
+            <div class="spec-row"><dt>Fine-tune</dt><dd>Unsloth + TRL</dd></div>
+            <div class="spec-row"><dt>Formats</dt><dd>BF16 · F16 GGUF · Q4_K_M</dd></div>
+            <div class="spec-row"><dt>License</dt><dd>Zabibu Technika License 1.1</dd></div>
+            <div class="spec-row"><dt>Chat format</dt><dd>ChatML</dd></div>
+          </dl>
+          <div class="spec-actions">
+            <a class="btn btn-blue btn-sm" href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Hugging Face <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline-light btn-sm" href="https://huggingface.co/mradermacher/Zabibu-Fikra-2B-GGUF">GGUF quants <span aria-hidden="true">↗</span></a>
+          </div>
+        </aside>
+      </div>
+
+      <p class="fine">
+        License: evaluation and non-production use until 14 June 2030; Apache 2.0 from that date.
+        Production use requires written permission.
+        <a href="https://zabibu.vercel.app/contact">Talk to us about production</a> ·
+        <a href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B/blob/main/LICENSE.md">Read the license</a>.
+      </p>
+
+      <figure class="model-shot">
+        <img src="assets/fikra.png" alt="Zabibu Fikra 2B model card on Hugging Face, showing the Fikra heart logo and model metadata" width="1855" height="843">
+        <figcaption><span>LIVE ON HUGGING FACE</span><span>ZABIBU-FIKRA-2B</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="capabilities" class="section ink">
+    <div class="wrap">
+      <p class="eyebrow">What it does</p>
+      <div class="verb-stack" aria-hidden="true">
+        <span>Reason</span>
+        <span>Switch</span>
+        <span>Act</span>
+        <span>Verify</span>
+      </div>
+
+      <div class="cap-grid">
+        <article class="cap">
+          <span class="n">01</span>
+          <h3>Reasoning that commits</h3>
+          <p>Thinking mode, action-oriented extraction, and a low-temperature operating range. Tuned to decide, not to ramble.</p>
         </article>
-        <article class="portal">
-          <div>
-            <div class="portal-top"><span class="tag teal">Vocabulary</span></div>
-            <h3>Vocabulary that fits the script</h3>
-            <p>Ethiopic and N'Ko are not edge cases. The tokenizer is part of the model, and it is evaluated per language, not per average.</p>
-          </div>
+        <article class="cap">
+          <span class="n">02</span>
+          <h3>Code-switching by design</h3>
+          <p>English and Swahili, with high-density dialect switching. Built for Pan-African business contexts, not translated after the fact.</p>
         </article>
-        <article class="portal">
-          <div>
-            <div class="portal-top"><span class="tag amber">Latency</span></div>
-            <h3>Latency you can plan around</h3>
-            <p>Generation cost follows tokens. If the tokenizer is expensive, the answer is slow and the data bill is higher. That is a product decision, not a benchmark detail.</p>
-          </div>
+        <article class="cap">
+          <span class="n">03</span>
+          <h3>Agentic by default</h3>
+          <p>The ChatML template carries tool-call and thinking channels. It drops into Arif Agent and Weaver without a translation layer.</p>
+        </article>
+        <article class="cap">
+          <span class="n">04</span>
+          <h3>Edge-native</h3>
+          <p>A 2B-class footprint and a Q4_K_M GGUF that fits consumer hardware. No data center, no API key, no queue.</p>
+        </article>
+        <article class="cap">
+          <span class="n">05</span>
+          <h3>Sovereign</h3>
+          <p>Runs locally, offline, and under your control. The system prompt is explicit: the model belongs to Zabibu Technika, not an external platform.</p>
+        </article>
+        <article class="cap">
+          <span class="n">06</span>
+          <h3>Tuned to run</h3>
+          <p>Recommended inference is 0.15–0.2 temperature, top_p 0.95, and repeat penalty 1.15. The defaults are in the card, not guessed.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="where" class="section">
-    <div class="section-head">
-      <p class="eyebrow">Where it runs</p>
-      <h2>Local first. Account optional. <span class="text-gradient">Power-cut safe.</span></h2>
-    </div>
-    <div class="grid three">
-      <article class="portal">
-        <div>
-          <div class="portal-top"><span class="tag teal">On device</span></div>
-          <h3>On the device</h3>
-          <p>Edge runs through Ollama or a local runtime. After the download, nothing has to leave the machine.</p>
-        </div>
-      </article>
-      <article class="portal">
-        <div>
-          <div class="portal-top"><span class="tag amber">Metered</span></div>
-          <h3>On a metered link</h3>
-          <p>Small models, compact prompts, and no mandatory telemetry. The agent should not cost more to run than the work is worth.</p>
-        </div>
-      </article>
-      <article class="portal">
-        <div>
-          <div class="portal-top"><span class="tag purple">Resilient</span></div>
-          <h3>After the lights come back</h3>
-          <p>Ledgers and checkpoints are written to survive an interrupted write. A half-written line costs one entry, not the session.</p>
-        </div>
-      </article>
-    </div>
-
-    <div class="receipt" aria-label="Published model specifications">
-      <div class="receipt-head"><span class="badge ok">open release</span><span>Zabibu-Fikra-2B · model card</span></div>
-      <table>
-        <thead><tr><th>field</th><th>value</th></tr></thead>
-        <tbody>
-          <tr><td>parameters</td><td>5B</td></tr>
-          <tr><td>precision</td><td>BF16</td></tr>
-          <tr><td>languages</td><td>English · Swahili</td></tr>
-          <tr><td>modality</td><td>Image-text-to-text</td></tr>
-          <tr><td>license</td><td>Zabibu Technika license</td></tr>
-        </tbody>
-      </table>
-      <p class="fine"><a href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Read the model card on Hugging Face</a> · specifications follow the published card.</p>
-    </div>
-  </section>
-
-  <section class="band">
-    <div id="agents" class="section">
+  <section id="run" class="section paper">
+    <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Use it with</p>
-        <h2>Fikra is the model. The agents are <span class="text-gradient">where it works.</span></h2>
+        <p class="eyebrow">Run it</p>
+        <h2>On the machine <span class="blue-text">in front of you.</span></h2>
       </div>
-      <div class="grid two">
-        <a class="portal featured" href="https://arifagent.vercel.app">
-          <div>
-            <div class="portal-top"><span class="tag purple">Multi-axis</span><span class="arrow" aria-hidden="true">↗</span></div>
-            <h3>Zabibu Arif · Arif Agent</h3>
-            <p>Code, growth, and business operations on one verified core. Multiple sign-ins and a real dashboard.</p>
+
+      <div class="deploy-grid">
+        <div class="code-stack">
+          <div class="code-card">
+            <div class="code-head"><span>OLLAMA / Q4_K_M</span><span>LOCAL</span></div>
+            <pre><span class="c"># pull the 4-bit quant and run it</span>
+<span class="g">ollama</span> run hf.co/zabibutechnika/Zabibu-Fikra-2B:Q4_K_M</pre>
           </div>
-        </a>
-        <a class="portal" href="https://zabibuweaver.vercel.app">
-          <div>
-            <div class="portal-top"><span class="tag teal">Mono-axis</span><span class="arrow" aria-hidden="true">↗</span></div>
-            <h3>Weaver</h3>
-            <p>The open-source coding agent that proves it's done. Proof receipts, a deterministic gate, and undo without git.</p>
+          <div class="code-card">
+            <div class="code-head"><span>HUGGING FACE CLI</span><span>GGUF</span></div>
+            <pre><span class="c"># or download the file directly</span>
+<span class="g">huggingface-cli</span> download zabibutechnika/Zabibu-Fikra-2B \
+  zabibu-fikra-Q4_K_M.gguf</pre>
           </div>
-        </a>
+        </div>
+
+        <aside class="param-card">
+          <span class="pixel">Recommended inference</span>
+          <div class="param-row"><span>Temperature</span><span>0.15 – 0.2</span></div>
+          <div class="param-row"><span>Top P</span><span>0.95</span></div>
+          <div class="param-row"><span>Repeat penalty</span><span>1.15</span></div>
+          <div class="param-row"><span>Chat format</span><span>ChatML</span></div>
+          <div class="param-row"><span>Quant</span><span>Q4_K_M / F16</span></div>
+          <p class="param-note">
+            Use the ChatML template from the model card. The repository ships a
+            <a href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B/blob/main/Modelfile">Modelfile</a>
+            for Ollama and an F16 GGUF for higher-fidelity local runs.
+          </p>
+        </aside>
       </div>
-      <div class="cta">
-        <a class="glow-button" href="https://github.com/Zabibu-Technika/ZabibuFikra">View the source <span class="arrow" aria-hidden="true">↗</span></a>
-        <a class="outline-button" href="https://arifagent.vercel.app">Meet Arif Agent</a>
+
+      <p class="fine">
+        Q4_K_M fits consumer hardware. F16 GGUF and BF16 weights are in the repository.
+        Community quants are available from
+        <a href="https://huggingface.co/mradermacher/Zabibu-Fikra-2B-GGUF">mradermacher</a>.
+      </p>
+    </div>
+  </section>
+
+  <section id="fikra-2" class="fikra2">
+    <div class="wrap">
+      <div class="fikra2-card">
+        <div class="fikra2-copy">
+          <span class="coming">COMING SOON / MODEL 02</span>
+          <h2>Fikra 2 is <span class="pink-text">coming.</span></h2>
+          <p class="lead">
+            Faster. Better. Native vision. Built deeper into the Zabibu Technika stack.
+            The first model proved a 2B-class model can reason, switch languages, and run
+            locally. The second is built to make that feel inevitable.
+          </p>
+
+          <div class="f2-grid">
+            <article class="f2">
+              <strong>Faster</strong>
+              <p>Lower latency, higher throughput, and a smaller memory bill. Built for the local loop, not a queue.</p>
+            </article>
+            <article class="f2">
+              <strong>Better</strong>
+              <p>Stronger reasoning, cleaner code-switching, fewer regressions. Trained against the failure modes of Model 01.</p>
+            </article>
+            <article class="f2">
+              <strong>Vision</strong>
+              <p>Native image understanding: documents, screenshots, interfaces, and the physical world. A first-class input, not a bolt-on.</p>
+            </article>
+            <article class="f2">
+              <strong>Native to Zabibu</strong>
+              <p>Trained around Arif Agent, Weaver, proof receipts, and the local stack. The model and the infrastructure ship together.</p>
+            </article>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-paper" href="https://github.com/Zabibu-Technika/ZabibuFikra">Follow the build <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline-light" href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Get Model 01</a>
+          </div>
+        </div>
+
+        <div class="fikra2-art" aria-hidden="true">
+          <span class="big02">02</span>
+          <img src="assets/fikra-mark-pink.svg" alt="">
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="manifesto">
-      <p class="eyebrow">The constraint</p>
-      <h2>Small enough to <span class="text-gradient">keep.</span></h2>
-      <p class="copy">A model that needs a new laptop, a stable grid, and a free network is not a model for most people. Fikra starts from the machine and the language in front of it.</p>
-      <a class="glow-button" href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Read the model card <span class="arrow" aria-hidden="true">↗</span></a>
+  <section id="edge-runtime" class="edge-runtime">
+    <div class="wrap">
+      <div class="edge-card">
+        <div class="edge-copy">
+          <span class="coming on-blue">COMING SOON / EDGE RUNTIME</span>
+          <h2>Fikra Edge <span class="pink-text">Runtime.</span></h2>
+          <p class="lead">
+            The runtime Fikra deserves. A proprietary, production-grade enterprise deployment
+            layer purpose-built to handle Fikra models with maximum efficiency, resilient
+            agentic workflows, and absolute local data sovereignty.
+          </p>
+
+          <div class="edge-features">
+            <div class="edge-feature">
+              <strong>Maximum efficiency</strong>
+              <p>Quantization-aware scheduling, memory reuse, and a runtime tuned to Fikra's token layout. Less overhead between the model and the work.</p>
+            </div>
+            <div class="edge-feature">
+              <strong>Resilient workflows</strong>
+              <p>Long-running tool loops, checkpoints, retries, and receipts. A workflow that survives a dropped connection or a closed lid.</p>
+            </div>
+            <div class="edge-feature">
+              <strong>Absolute sovereignty</strong>
+              <p>The model, the memory, and the data stay on your hardware. No telemetry, no hosted dependency, no silent egress.</p>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-paper" href="https://zabibu.vercel.app/contact">Talk to us <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline-light" href="#model">Read the model card</a>
+          </div>
+          <p class="edge-note">Commercial availability to be announced. Enterprise previews will follow Model 02.</p>
+        </div>
+
+        <div class="edge-art" aria-hidden="true">
+          <div class="edge-stack">
+            <div class="edge-layer">FIKRA MODEL 01 / 02</div>
+            <div class="edge-connector"></div>
+            <div class="edge-layer main">FIKRA EDGE RUNTIME<small>SCHEDULER · MEMORY · TOOLS · RECEIPTS</small></div>
+            <div class="edge-connector"></div>
+            <div class="edge-row"><span>ARIF</span><span>WEAVER</span><span>EDGE APPS</span></div>
+          </div>
+          <div class="edge-seal">DATA STAYS LOCAL<span>NO CLOUD IN THE LOOP</span></div>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="assets/logo.png" alt="Zabibu Technika">
-      <p>Fikra is the model family behind Zabibu's agents. Measured in the language you actually use.</p>
-      <p class="footer-loc">Nairobi, Kenya / East Africa</p>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/fikra-mark-light.svg" alt="">
+        <p><strong>Fikra Model 1 – 2B.</strong> A Zabibu Technika model. Built in Nairobi for the machines people actually have.</p>
+        <p class="loc">Nairobi, Kenya / East Africa</p>
+      </div>
+      <div class="footer-col">
+        <h3>Model</h3>
+        <a href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Model card</a>
+        <a href="https://huggingface.co/mradermacher/Zabibu-Fikra-2B-GGUF">GGUF quants</a>
+        <a href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B/blob/main/LICENSE.md">License</a>
+        <a href="#run">Inference settings</a>
+      </div>
+      <div class="footer-col">
+        <h3>Ecosystem</h3>
+        <a href="https://zabibuweaver.vercel.app">Weaver</a>
+        <a href="https://arifagent.vercel.app">Zabibu Arif</a>
+        <a href="https://zabibu.vercel.app">Zabibu Technika</a>
+      </div>
+      <div class="footer-col">
+        <h3>Build</h3>
+        <a href="https://github.com/Zabibu-Technika/ZabibuFikra">GitHub</a>
+        <a href="https://huggingface.co/zabibutechnika">Hugging Face</a>
+        <a href="#fikra-2">Fikra 2</a>
+        <a href="#edge-runtime">Edge Runtime</a>
+      </div>
     </div>
-    <div class="footer-col">
-      <p class="footer-heading">Ecosystem</p>
-      <a href="https://zabibuweaver.vercel.app">Weaver</a>
-      <a href="https://arifagent.vercel.app">Zabibu Arif</a>
-      <a href="https://zabibufikra.vercel.app">Fikra</a>
+    <div class="footer-bottom">
+      <span>© 2026 Zabibu Technika. All rights reserved.</span>
+      <span class="mono">FIKRA 01 / 2B · DESIGNED FROM NAIROBI</span>
     </div>
-    <div class="footer-col">
-      <p class="footer-heading">Models</p>
-      <a href="#models">Coder</a>
-      <a href="#models">Reason</a>
-      <a href="#models">Edge</a>
-      <a href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Fikra 2B</a>
-    </div>
-    <div class="footer-col">
-      <p class="footer-heading">Company</p>
-      <a href="https://zabibu.vercel.app">Zabibu Technika</a>
-      <a href="https://github.com/Zabibu-Technika/ZabibuFikra">GitHub</a>
-      <a href="https://github.com/Zabibu-Technika/ZabibuWeaver/blob/main/LICENSE">MIT license</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Zabibu Technika. All rights reserved.</span>
-    <span class="mono">Designed from Nairobi.</span>
   </div>
 </footer>
 </body>
