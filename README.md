@@ -1,6 +1,7 @@
-# Zabibu Technika — web
+# ZabibuFikra — Fikra web and product hub
 
-The website repository for Zabibu Technika's public product hub and the Fikra site.
+The Fikra model-family site, plus the public product hub linking Weaver, Zabibu Arif, and
+Fikra.
 
 ## What is here
 
