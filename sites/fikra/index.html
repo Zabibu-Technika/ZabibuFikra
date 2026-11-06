@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fikra Model 1 — 2B · small model, deep reasoning</title>
-<meta name="description" content="Zabibu Fikra Model 1 – 2B is an ultra-efficient, reasoning-optimized model built on Gemma-4-2B-it. 131k context, English and Swahili, agentic tool use, Q4_K_M GGUF. Runs locally. Fikra Model 2 is coming soon; the Fikra Edge Runtime is available for commercial pilots.">
+<title>Fikra Model 2 — 4B · on-device, offline-first</title>
+<meta name="description" content="Zabibu Fikra Model 2 – 4B is a 4B-parameter, instruction-tuned model built in Nairobi for private, offline-first deployment. 262k context, English and Swahili, 91.3% on the Fikra release suite, Apache 2.0, Q4_K_M GGUF.">
 <meta name="theme-color" content="#050507">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,17 +19,18 @@
     <a class="brand" href="./">
       <img class="brand-mark" src="assets/fikra-mark-light.svg" alt="">
       <span class="brand-word">FIKRA</span>
-      <span class="brand-tag">MODEL 01</span>
+      <span class="brand-tag">MODEL 02</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="#model">The model</a>
+      <a href="#model-2">Model 2</a>
       <a href="#capabilities">Capabilities</a>
+      <a href="#benchmarks">Benchmarks</a>
+      <a href="#model-1">Model 1</a>
       <a href="#run">Run it</a>
-      <a href="#fikra-model-2">Fikra Model 2</a>
       <a href="runtime/">Edge Runtime</a>
     </nav>
     <div class="header-actions">
-      <a class="btn btn-paper btn-sm" href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Get the model <span aria-hidden="true">↗</span></a>
+      <a class="btn btn-paper btn-sm" href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B">Get Model 2 <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </header>
@@ -38,119 +39,126 @@
   <section class="hero">
     <div class="hero-inner wrap">
       <div class="hero-copy">
-        <p class="hero-eyebrow">ZABIBU FIKRA · MODEL 01 · 2B</p>
-        <h1>Small model.<br><span class="pink-text">Deep reasoning.</span></h1>
+        <span class="coming available">AVAILABLE NOW / MODEL 02</span>
+        <h1><span class="nowrap">Fikra Model 2</span><br><span class="pink-text">is here.</span></h1>
         <p class="hero-lede">
-          An ultra-efficient, reasoning-optimized model built on <strong>Gemma-4-2B-it</strong>
-          and tuned for Pan-African contexts, business agility, and high-density
-          <strong>English–Swahili</strong> code-switching. It runs on the machine in front of you.
+          A <strong>4B-parameter</strong>, instruction-tuned model built in Nairobi for
+          private, offline-first work. <strong>262k context</strong>. English and Swahili.
+          <strong>75.5% MMLU</strong> and <strong>91.3%</strong> on the Fikra release suite.
+          <strong>Apache 2.0</strong>.
         </p>
         <div class="cta-row">
-          <a class="btn btn-paper" href="#model">Read the model card <span aria-hidden="true">↗</span></a>
-          <a class="btn btn-outline-light" href="#run">Download GGUF</a>
+          <a class="btn btn-paper" href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B">Get Model 2 <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline-light" href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF">Download GGUF</a>
         </div>
         <div class="hero-stats">
-          <div class="hero-stat"><strong>2B</strong><span>model class</span></div>
-          <div class="hero-stat"><strong>131K</strong><span>context tokens</span></div>
-          <div class="hero-stat"><strong>EN + SW</strong><span>languages</span></div>
-          <div class="hero-stat"><strong>Q4_K_M</strong><span>GGUF on device</span></div>
+          <div class="hero-stat"><strong>4B</strong><span>parameters</span></div>
+          <div class="hero-stat"><strong>262K</strong><span>context tokens</span></div>
+          <div class="hero-stat"><strong>75.5%</strong><span>MMLU</span></div>
+          <div class="hero-stat"><strong>91.3%</strong><span>release suite</span></div>
         </div>
       </div>
 
       <div class="hero-art" aria-hidden="true">
         <img class="hero-heart" src="assets/fikra-mark-light.svg" alt="">
-        <span class="art-chip art-chip-a">REASONING / AGENTIC</span>
-        <span class="art-chip art-chip-b">SOVEREIGN / LOCAL</span>
+        <span class="art-chip art-chip-a">4B / ON-DEVICE</span>
+        <span class="art-chip art-chip-b">APACHE 2.0</span>
       </div>
     </div>
   </section>
 
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track">
-      <span>FIKRA MODEL 01 — 2B</span><em>◆</em><span>131,072 TOKEN CONTEXT</span><em>◆</em><span>ENGLISH + SWAHILI</span><em>◆</em><span>Q4_K_M GGUF</span><em>◆</em><span>LOCAL / SOVEREIGN</span><em>◆</em><span>REASONING + AGENTIC</span><em>◆</em><span>EDGE RUNTIME — COMING SOON</span><em>◆</em>
-      <span>FIKRA MODEL 01 — 2B</span><em>◆</em><span>131,072 TOKEN CONTEXT</span><em>◆</em><span>ENGLISH + SWAHILI</span><em>◆</em><span>Q4_K_M GGUF</span><em>◆</em><span>LOCAL / SOVEREIGN</span><em>◆</em><span>REASONING + AGENTIC</span><em>◆</em><span>EDGE RUNTIME — COMING SOON</span><em>◆</em>
+      <span>FIKRA MODEL 2 — 4B</span><em>◆</em><span>262K CONTEXT</span><em>◆</em><span>75.5% MMLU</span><em>◆</em><span>91.3% RELEASE SUITE</span><em>◆</em><span>ENGLISH + SWAHILI</span><em>◆</em><span>APACHE 2.0</span><em>◆</em><span>Q4_K_M 2.71 GB</span><em>◆</em><span>OFFLINE-FIRST</span><em>◆</em>
+      <span>FIKRA MODEL 2 — 4B</span><em>◆</em><span>262K CONTEXT</span><em>◆</em><span>75.5% MMLU</span><em>◆</em><span>91.3% RELEASE SUITE</span><em>◆</em><span>ENGLISH + SWAHILI</span><em>◆</em><span>APACHE 2.0</span><em>◆</em><span>Q4_K_M 2.71 GB</span><em>◆</em><span>OFFLINE-FIRST</span><em>◆</em>
     </div>
   </div>
 
-  <section id="model" class="section paper">
+  <section id="model-2" class="section paper">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">The model that exists</p>
-        <h2>Not a demo. <span class="blue-text">A downloadable model.</span></h2>
+        <p class="eyebrow">Release / 2026-11-06</p>
+        <h2>The 4B model <span class="blue-text">built for the edge.</span></h2>
       </div>
 
       <div class="model-grid">
         <div class="model-copy">
           <p class="lead">
-            <strong>Zabibu Fikra Model 1 – 2B</strong> is an ultra-efficient, reasoning-optimized
-            model built on the Gemma-4-2B-it architecture. It was conceptualized, built, and
-            deployed by a solo developer in East Africa, then tuned for Pan-African contexts,
-            business agility, and high-density English–Swahili code-switching.
+            <strong>Zabibu Fikra Model 2 – 4B</strong> (internal <code>fikra-v2-e4</code>) is a
+            4B-parameter instruction-tuned model developed by Zabibu Technika in Nairobi. It is
+            a Fikra-specialized fine-tune built on <code>fikra-v2-e3</code>, which derives from
+            <strong>Qwen/Qwen3.5-4B</strong>. It is designed for private, on-device, offline-first
+            deployment with Pan-African contextual awareness.
           </p>
           <p class="copy">
-            The model card calls its approach <strong>action-oriented cognitive extraction</strong>.
-            Every instruction is treated as an execution task, not a prompt for polite filler.
-            It is a 2B-class model that runs on the hardware people actually have — local,
-            private, and offline when the network is not there.
+            The headline is not just that it is bigger. It is that the model holds
+            <strong>Swahili-native identity</strong>, English–Swahili code-switching, tool use,
+            longform work, and safety boundaries — while still running locally. It scores
+            <strong>91.3%</strong> on the 115-case release suite and <strong>90.0%</strong> on
+            held-out paraphrases, with a <strong>+2.6 point</strong> Fikra-specific gain over the
+            e3 checkpoint. The suite covers Kenyan data, canary-review, gaming, fintech, health,
+            culture, and local knowledge — not just a generic benchmark.
           </p>
 
           <blockquote class="pull-quote">
-            “Deterministic action over verbose guesswork.”
-            <span>From the Fikra model card</span>
+            “Preserves Qwen/Qwen3.5-4B's general capability while adding Fikra-specific behaviors.”
+            <span>From the Model 2 card</span>
           </blockquote>
 
           <p class="copy">
-            It is not trying to win a benchmark for general knowledge. It is trying to be the
-            model you can keep: a small, sharp reasoning engine for business workflows, local
-            agents, and software that has to work from Nairobi to the next town without a
-            reliable connection.
+            Apache 2.0. 262,144 tokens of context. 2.71 GB in Q4_K_M. This is a model you can
+            keep on the laptop, in the clinic, in the shop, or in the field — without a hosted
+            API in the loop.
           </p>
 
           <div class="fact-row">
-            <span class="fact">Built in East Africa</span>
-            <span class="fact">Fine-tuned with Unsloth</span>
-            <span class="fact">2B-class footprint</span>
-            <span class="fact">Open weights</span>
+            <span class="fact">Built in Nairobi</span>
+            <span class="fact">Apache 2.0</span>
+            <span class="fact">4B parameters</span>
+            <span class="fact">Runs on CPU</span>
           </div>
         </div>
 
-        <aside class="spec-card" aria-label="Fikra Model 1 specifications">
-          <div class="spec-head"><span>MODEL CARD / 01</span><span>ZABIBU TECHNIKA</span></div>
+        <aside class="spec-card" aria-label="Fikra Model 2 specifications">
+          <div class="spec-head"><span>MODEL CARD / 02</span><span>ZABIBU TECHNIKA</span></div>
           <dl>
-            <div class="spec-row"><dt>Model</dt><dd>Zabibu Fikra Model 1 – 2B<small>Zabibu-Fikra-2B on Hugging Face</small></dd></div>
-            <div class="spec-row"><dt>Parameters</dt><dd>5.12B total<small>2B-class footprint</small></dd></div>
-            <div class="spec-row"><dt>Context</dt><dd>131,072 tokens</dd></div>
+            <div class="spec-row"><dt>Model</dt><dd>Zabibu Fikra Model 2 – 4B<small>fikra-v2-e4</small></dd></div>
+            <div class="spec-row"><dt>Parameters</dt><dd>4,205,751,296<small>4B</small></dd></div>
+            <div class="spec-row"><dt>Context</dt><dd>262,144 tokens</dd></div>
             <div class="spec-row"><dt>Languages</dt><dd>English · Swahili</dd></div>
-            <div class="spec-row"><dt>Architecture</dt><dd>Gemma-4-2B-it<small>Gemma 4 E2B · multimodal token space</small></dd></div>
-            <div class="spec-row"><dt>Fine-tune</dt><dd>Unsloth + TRL</dd></div>
-            <div class="spec-row"><dt>Formats</dt><dd>BF16 · F16 GGUF · Q4_K_M</dd></div>
-            <div class="spec-row"><dt>License</dt><dd>Zabibu Technika License 1.1</dd></div>
-            <div class="spec-row"><dt>Chat format</dt><dd>ChatML</dd></div>
+            <div class="spec-row"><dt>Base</dt><dd>Qwen/Qwen3.5-4B<small>via zabibutechnika/fikra-v2-e3</small></dd></div>
+            <div class="spec-row"><dt>License</dt><dd>Apache 2.0</dd></div>
+            <div class="spec-row"><dt>Weights</dt><dd>fp16 8.43 GB<small>Q4_K_M 2.71 GB · F16 GGUF 8.42 GB</small></dd></div>
+            <div class="spec-row"><dt>Release</dt><dd>2026-11-06</dd></div>
           </dl>
           <div class="spec-actions">
-            <a class="btn btn-blue btn-sm" href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Hugging Face <span aria-hidden="true">↗</span></a>
-            <a class="btn btn-outline-light btn-sm" href="https://huggingface.co/mradermacher/Zabibu-Fikra-2B-GGUF">GGUF quants <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-blue btn-sm" href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B">Hugging Face <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline-light btn-sm" href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF">GGUF repo <span aria-hidden="true">↗</span></a>
           </div>
         </aside>
       </div>
 
-      <p class="fine">
-        License: evaluation and non-production use until 14 June 2030; Apache 2.0 from that date.
-        Production use requires written permission.
-        <a href="https://zabibu.vercel.app/contact">Talk to us about production</a> ·
-        <a href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B/blob/main/LICENSE.md">Read the license</a>.
-      </p>
-
-      <figure class="model-shot">
-        <img src="assets/fikra.png" alt="Zabibu Fikra 2B model card on Hugging Face, showing the Fikra heart logo and model metadata" width="1855" height="843">
-        <figcaption><span>LIVE ON HUGGING FACE</span><span>ZABIBU-FIKRA-2B</span></figcaption>
+      <figure class="model-shot model2-shot">
+        <img src="assets/model2-card.png" alt="Zabibu Fikra Model 2 4B model card on Hugging Face, showing the Fikra heart logo, Apache 2.0 license, and model description" width="800" height="720">
+        <figcaption><span>LIVE ON HUGGING FACE</span><span>ZABIBU-FIKRA-MODEL-2-4B</span></figcaption>
       </figure>
+
+      <div class="score-grid" aria-label="Fikra release suite category scores">
+        <div class="score"><strong>8/8</strong><span>Identity direct</span><em>identity_direct</em></div>
+        <div class="score"><strong>4/4</strong><span>Swahili identity</span><em>identity_swahili</em></div>
+        <div class="score"><strong>5/5</strong><span>UHI protocol</span><em>uhi_protocol</em></div>
+        <div class="score"><strong>3/3</strong><span>Safety boundary</span><em>safety_boundary</em></div>
+        <div class="score"><strong>2/2</strong><span>Longform</span><em>longform</em></div>
+        <div class="score"><strong>4/4</strong><span>Tool ABI</span><em>tool_abi</em></div>
+      </div>
+      <p class="fine">All six categories in the 115-case Fikra release suite pass. <a href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B">Read the full card</a>.</p>
     </div>
   </section>
 
   <section id="capabilities" class="section ink">
     <div class="wrap">
-      <p class="eyebrow">What it does</p>
+      <p class="eyebrow">What Model 2 does</p>
+      <h2 class="sr-only">Fikra Model 2 capabilities</h2>
       <div class="verb-stack" aria-hidden="true">
         <span>Reason</span>
         <span>Switch</span>
@@ -160,126 +168,225 @@
 
       <div class="cap-grid">
         <article class="cap">
-          <span class="n">01</span>
-          <h3>Reasoning that commits</h3>
-          <p>Thinking mode, action-oriented extraction, and a low-temperature operating range. Tuned to decide, not to ramble.</p>
+          <span class="n">4/4</span>
+          <h3>Swahili-native identity</h3>
+          <p>The release suite checks Swahili identity and English–Swahili code-switching. Model 2 passes 4/4 without losing the thread.</p>
         </article>
         <article class="cap">
-          <span class="n">02</span>
-          <h3>Code-switching by design</h3>
-          <p>English and Swahili, with high-density dialect switching. Built for Pan-African business contexts, not translated after the fact.</p>
+          <span class="n">4/4</span>
+          <h3>Tool ABI</h3>
+          <p>Structured tool calls for agent loops. Passes 4/4 and is designed to sit under Arif Agent and Weaver.</p>
         </article>
         <article class="cap">
-          <span class="n">03</span>
-          <h3>Agentic by default</h3>
-          <p>The ChatML template carries tool-call and thinking channels. It drops into Arif Agent and Weaver without a translation layer.</p>
+          <span class="n">5/5</span>
+          <h3>UHI protocol</h3>
+          <p>The UHI protocol is checked end to end in the release suite. Model 2 passes 5/5.</p>
         </article>
         <article class="cap">
-          <span class="n">04</span>
-          <h3>Edge-native</h3>
-          <p>A 2B-class footprint and a Q4_K_M GGUF that fits consumer hardware. No data center, no API key, no queue.</p>
+          <span class="n">3/3</span>
+          <h3>Safety boundary</h3>
+          <p>No unresolved safety case in the auto-checked suite. 3/3; external red-teaming is still pending.</p>
         </article>
         <article class="cap">
-          <span class="n">05</span>
-          <h3>Sovereign</h3>
-          <p>Runs locally, offline, and under your control. The system prompt is explicit: the model belongs to Zabibu Technika, not an external platform.</p>
+          <span class="n">2/2</span>
+          <h3>Longform</h3>
+          <p>262,144 tokens of context for long documents and long sessions. Passes 2/2 on the release suite.</p>
         </article>
         <article class="cap">
-          <span class="n">06</span>
-          <h3>Tuned to run</h3>
-          <p>Recommended inference is 0.15–0.2 temperature, top_p 0.95, and repeat penalty 1.15. The defaults are in the card, not guessed.</p>
+          <span class="n">2.71 GB</span>
+          <h3>On-device, offline</h3>
+          <p>Q4_K_M is 2.71 GB and runs on CPU through llama.cpp. No external calls are required at inference.</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section id="benchmarks" class="section paper">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Benchmarks / what is measured</p>
+        <h2>Measured. <span class="blue-text">With the caveats attached.</span></h2>
+      </div>
+
+      <div class="metrics">
+        <div class="metric hot"><strong>91.3%</strong><span>105/115 auto-checked release suite</span></div>
+        <div class="metric"><strong>90.0%</strong><span>9/10 held-out paraphrases</span></div>
+        <div class="metric"><strong>88.7%</strong><span>e3 checkpoint baseline</span></div>
+        <div class="metric pink"><strong>+2.6</strong><span>Fikra-specific points over e3</span></div>
+      </div>
+
+      <div class="bench-wrap">
+        <table class="bench-table">
+          <thead>
+            <tr><th>Model</th><th class="num">Params</th><th class="num">MMLU</th><th class="num">HellaSwag</th></tr>
+          </thead>
+          <tbody>
+            <tr class="win"><td>Fikra Model 2 – 4B</td><td class="num">4.2B</td><td class="num">75.5%</td><td class="num">68.0%</td></tr>
+            <tr><td>Fikra Model 1 – 2B</td><td class="num">2B</td><td class="num">36.0%</td><td class="num">40.0%</td></tr>
+            <tr><td>Qwen2.5-3B-Instruct</td><td class="num">3B</td><td class="num">68.8%</td><td class="num">40.0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="fact-row">
+        <span class="fact">+39.6 MMLU vs Model 1</span>
+        <span class="fact">+28.0 HellaSwag vs Model 1</span>
+        <span class="fact">+2.2B parameters</span>
+      </div>
+
+      <div class="caveat">
+        <strong>Read this before quoting it</strong>
+        <p>
+          Not size-normalized. Most of the MMLU delta comes from moving from a 2B to a 4B base,
+          not from Fikra training alone. The Fikra-specific gain is the +2.6 points over the e3
+          checkpoint and the identity/context categories. MMLU and HellaSwag measure English
+          academic knowledge, not African-context capability. Run with
+          lm-evaluation-harness 0.4.13, 10 samples per task, fp16, on Kaggle 2×T4; these scores
+          are not comparable to full-suite published numbers. Raw JSONs live in benchmarks/.
+        </p>
+      </div>
+
+      <p class="fine">
+        <a href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B/blob/main/BENCHMARKS.md">Read BENCHMARKS.md</a>
+        · Phi-3.5-mini, Llama-3.2-3B, and Gemma-2-2B were incompatible or gated in this harness run.
+      </p>
+    </div>
+  </section>
+
+  <section id="limits" class="section pink">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Limits / read before deploying</p>
+        <h2>What Model 2 does not do.</h2>
+        <p class="lead">
+          The model card is explicit about the edges. Deployment should be too.
+        </p>
+      </div>
+
+      <div class="limits-grid">
+        <div class="limit"><strong>No Swahili benchmark</strong><p>There is no published cross-language Swahili benchmark. The release suite measures it; MMLU and HellaSwag do not.</p></div>
+        <div class="limit"><strong>No live information</strong><p>Recency stops at the training data. Give it retrieval for current facts.</p></div>
+        <div class="limit"><strong>4B can hallucinate</strong><p>It will hallucinate on specialized domains. It is not a replacement for retrieval or a curated knowledge base.</p></div>
+        <div class="limit"><strong>&lt;think&gt; leakage</strong><p>The model occasionally emits <code>&lt;think&gt;...&lt;/think&gt;</code> blocks in visible output. Strip them in post-processing.</p></div>
+        <div class="limit"><strong>Inherited biases</strong><p>Qwen/Qwen3.5-4B biases carry through. They have not been audited here.</p></div>
+        <div class="limit"><strong>Not red-teamed</strong><p>No unresolved safety case in the auto-checked suite, but no external red-team has been done.</p></div>
+      </div>
+
+      <p class="fine">
+        Full limitations and safety notes are in the
+        <a href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B#limitations">model card</a>.
+      </p>
+    </div>
+  </section>
+
+  <section id="model-1" class="section ink">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Previous release / Model 01</p>
+        <h2>The 2B model is <span class="pink-text">still here.</span></h2>
+      </div>
+
+      <div class="model-grid">
+        <div class="model-copy">
+          <p class="lead">
+            <strong>Zabibu Fikra Model 1 – 2B</strong> is the smaller release. It remains
+            available for constrained hardware, earlier integrations, and the original license.
+          </p>
+          <p class="copy">
+            2B-class, 5.12B total parameters, 131,072-token context, English and Swahili, and a
+            Q4_K_M GGUF. Licensed under the Zabibu Technika License 1.1 for evaluation and
+            non-production use until 14 June 2030; Apache 2.0 from that date.
+          </p>
+          <div class="fact-row">
+            <span class="fact">2B class</span>
+            <span class="fact">5.12B total</span>
+            <span class="fact">131k context</span>
+            <span class="fact">Q4_K_M</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-paper" href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Model 1 card <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline-light" href="https://huggingface.co/mradermacher/Zabibu-Fikra-2B-GGUF">GGUF quants</a>
+          </div>
+        </div>
+
+        <aside class="spec-card" aria-label="Fikra Model 1 specifications">
+          <div class="spec-head"><span>MODEL CARD / 01</span><span>STILL AVAILABLE</span></div>
+          <dl>
+            <div class="spec-row"><dt>Model</dt><dd>Zabibu Fikra Model 1 – 2B</dd></div>
+            <div class="spec-row"><dt>Parameters</dt><dd>5.12B total<small>2B-class footprint</small></dd></div>
+            <div class="spec-row"><dt>Context</dt><dd>131,072 tokens</dd></div>
+            <div class="spec-row"><dt>Languages</dt><dd>English · Swahili</dd></div>
+            <div class="spec-row"><dt>Base</dt><dd>Gemma-4-2B-it</dd></div>
+            <div class="spec-row"><dt>Formats</dt><dd>BF16 · F16 GGUF · Q4_K_M</dd></div>
+            <div class="spec-row"><dt>License</dt><dd>Zabibu Technika License 1.1</dd></div>
+            <div class="spec-row"><dt>Chat format</dt><dd>ChatML</dd></div>
+          </dl>
+        </aside>
+      </div>
+
+      <figure class="model-shot model1-shot">
+        <img src="assets/model1-card.png" alt="Zabibu Fikra Model 1 2B model card on Hugging Face, showing the Fikra heart logo and model description" width="800" height="720">
+        <figcaption><span>MODEL 01 / HUGGING FACE</span><span>ZABIBU-FIKRA-2B</span></figcaption>
+      </figure>
     </div>
   </section>
 
   <section id="run" class="section paper">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Run it</p>
-        <h2>On the machine <span class="blue-text">in front of you.</span></h2>
+        <p class="eyebrow">Run Model 2</p>
+        <h2>On CPU. On device. <span class="blue-text">On your terms.</span></h2>
       </div>
 
       <div class="deploy-grid">
         <div class="code-stack">
           <div class="code-card">
-            <div class="code-head"><span>OLLAMA / Q4_K_M</span><span>LOCAL</span></div>
-            <pre><span class="c"># pull the 4-bit quant and run it</span>
-<span class="g">ollama</span> run hf.co/zabibutechnika/Zabibu-Fikra-2B:Q4_K_M</pre>
+            <div class="code-head"><span>LLAMA.CPP / CLI</span><span>Q4_K_M</span></div>
+            <pre><span class="c"># quick chat on the quantized build</span>
+<span class="g">llama-cli</span> -hf zabibutechnika/Fikra-Model-2-4B-GGUF:Fikra-Model-2-4B-Q4_K_M.gguf \
+  -p "Who are you?" --temp 0</pre>
           </div>
           <div class="code-card">
-            <div class="code-head"><span>HUGGING FACE CLI</span><span>GGUF</span></div>
-            <pre><span class="c"># or download the file directly</span>
-<span class="g">huggingface-cli</span> download zabibutechnika/Zabibu-Fikra-2B \
-  zabibu-fikra-Q4_K_M.gguf</pre>
+            <div class="code-head"><span>LLAMA.CPP / SERVER</span><span>OPENAI-COMPATIBLE</span></div>
+            <pre><span class="c"># local server, 8k working context</span>
+<span class="g">llama-server</span> -hf zabibutechnika/Fikra-Model-2-4B-GGUF:Fikra-Model-2-4B-Q4_K_M.gguf \
+  --port 8080 -c 8192 -ngl 99</pre>
+          </div>
+          <div class="code-card">
+            <div class="code-head"><span>TRANSFORMERS / FP16</span><span>8.43 GB</span></div>
+            <pre><span class="c"># full-precision weights</span>
+<span class="g">import</span> torch
+<span class="g">from</span> transformers <span class="g">import</span> AutoModelForCausalLM, AutoTokenizer
+
+model = AutoModelForCausalLM.from_pretrained(
+    <span class="b">"zabibutechnika/Fikra-Model-2-4B"</span>,
+    torch_dtype=torch.float16, device_map=<span class="b">"auto"</span>)
+tok = AutoTokenizer.from_pretrained(
+    <span class="b">"zabibutechnika/Fikra-Model-2-4B"</span>)</pre>
           </div>
         </div>
 
         <aside class="param-card">
-          <span class="pixel">Recommended inference</span>
-          <div class="param-row"><span>Temperature</span><span>0.15 – 0.2</span></div>
-          <div class="param-row"><span>Top P</span><span>0.95</span></div>
-          <div class="param-row"><span>Repeat penalty</span><span>1.15</span></div>
-          <div class="param-row"><span>Chat format</span><span>ChatML</span></div>
-          <div class="param-row"><span>Quant</span><span>Q4_K_M / F16</span></div>
+          <span class="pixel">Model 2 at a glance</span>
+          <div class="param-row"><span>Context</span><span>262,144</span></div>
+          <div class="param-row"><span>Q4_K_M</span><span>2.71 GB</span></div>
+          <div class="param-row"><span>F16 GGUF</span><span>8.42 GB</span></div>
+          <div class="param-row"><span>fp16 weights</span><span>8.43 GB</span></div>
+          <div class="param-row"><span>License</span><span>Apache 2.0</span></div>
+          <div class="param-row"><span>Output hygiene</span><span>strip &lt;think&gt;</span></div>
           <p class="param-note">
-            Use the ChatML template from the model card. The repository ships a
-            <a href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B/blob/main/Modelfile">Modelfile</a>
-            for Ollama and an F16 GGUF for higher-fidelity local runs.
+            Q4_K_M is the recommended CPU build, but it has not been re-evaluated. Expect
+            1–3 points vs fp16 on short-form evals; F16 GGUF is numerically equivalent to the
+            fp16 weights. The <a href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B/blob/main/config.json">config</a>
+            and <a href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B">full card</a> are published.
           </p>
         </aside>
       </div>
 
       <p class="fine">
-        Q4_K_M fits consumer hardware. F16 GGUF and BF16 weights are in the repository.
-        Community quants are available from
-        <a href="https://huggingface.co/mradermacher/Zabibu-Fikra-2B-GGUF">mradermacher</a>.
+        llama.cpp commands follow the GGUF card. Q4_K_M is 2.71 GB; F16 is 8.42 GB.
+        <a href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF">Read the GGUF card</a>.
       </p>
-    </div>
-  </section>
-
-  <section id="fikra-model-2" class="fikra2">
-    <div class="wrap">
-      <div class="fikra2-card">
-        <div class="fikra2-copy">
-          <span class="coming">COMING SOON / FIKRA MODEL 2</span>
-          <h2>Fikra Model 2 is <span class="pink-text">coming.</span></h2>
-          <p class="lead">
-            Faster. Better. Native vision. Built deeper into the Zabibu Technika stack.
-            The first model proved a 2B-class model can reason, switch languages, and run
-            locally. The second is built to make that feel inevitable.
-          </p>
-
-          <div class="f2-grid">
-            <article class="f2">
-              <strong>Faster</strong>
-              <p>Lower latency, higher throughput, and a smaller memory bill. Built for the local loop, not a queue.</p>
-            </article>
-            <article class="f2">
-              <strong>Better</strong>
-              <p>Stronger reasoning, cleaner code-switching, fewer regressions. Trained against the failure modes of Model 01.</p>
-            </article>
-            <article class="f2">
-              <strong>Vision</strong>
-              <p>Native image understanding: documents, screenshots, interfaces, and the physical world. A first-class input, not a bolt-on.</p>
-            </article>
-            <article class="f2">
-              <strong>Native to Zabibu</strong>
-              <p>Trained around Arif Agent, Weaver, proof receipts, and the local stack. The model and the infrastructure ship together.</p>
-            </article>
-          </div>
-
-          <div class="cta-row">
-            <a class="btn btn-paper" href="https://github.com/Zabibu-Technika/ZabibuFikra">Follow the build <span aria-hidden="true">↗</span></a>
-            <a class="btn btn-outline-light" href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Get Model 01</a>
-          </div>
-        </div>
-
-        <div class="fikra2-art" aria-hidden="true">
-          <span class="big02">02</span>
-          <img src="assets/fikra-mark-pink.svg" alt="">
-        </div>
-      </div>
     </div>
   </section>
 
@@ -290,9 +397,9 @@
           <span class="coming on-blue">EDGE RUNTIME / COMMERCIAL</span>
           <h2>Fikra Edge <span class="pink-text">Runtime.</span></h2>
           <p class="lead">
-            The runtime Fikra deserves. A proprietary, production-grade enterprise deployment
-            layer purpose-built to handle Fikra models with maximum efficiency, resilient
-            agentic workflows, and absolute local data sovereignty.
+            The runtime Fikra Model 2 deserves. A proprietary, production-grade enterprise
+            deployment layer purpose-built to handle Fikra models with maximum efficiency,
+            resilient agentic workflows, and absolute local data sovereignty.
           </p>
 
           <div class="edge-features">
@@ -319,7 +426,7 @@
 
         <div class="edge-art" aria-hidden="true">
           <div class="edge-stack">
-            <div class="edge-layer">FIKRA MODEL 01 / 02</div>
+            <div class="edge-layer">FIKRA MODEL 2 / 4B</div>
             <div class="edge-connector"></div>
             <div class="edge-layer main">FIKRA EDGE RUNTIME<small>SCHEDULER · MEMORY · TOOLS · RECEIPTS</small></div>
             <div class="edge-connector"></div>
@@ -337,15 +444,15 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="assets/fikra-mark-light.svg" alt="">
-        <p><strong>Fikra Model 1 – 2B.</strong> A Zabibu Technika product, made by Tehillah Kachila. Built in Nairobi for the machines people actually have.</p>
+        <p><strong>Fikra Model 2 – 4B.</strong> A Zabibu Technika model, made by Tehillah Kachila. Built in Nairobi for the machines people actually have.</p>
         <p class="loc">Nairobi, Kenya / East Africa</p>
       </div>
       <div class="footer-col">
         <h3>Model</h3>
-        <a href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Model card</a>
-        <a href="https://huggingface.co/mradermacher/Zabibu-Fikra-2B-GGUF">GGUF quants</a>
-        <a href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B/blob/main/LICENSE.md">License</a>
-        <a href="#run">Inference settings</a>
+        <a href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B">Model 2 card</a>
+        <a href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF">GGUF repo</a>
+        <a href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Model 1 card</a>
+        <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>
       </div>
       <div class="footer-col">
         <h3>Ecosystem</h3>
@@ -357,13 +464,13 @@
         <h3>Build</h3>
         <a href="https://github.com/Zabibu-Technika/ZabibuFikra">GitHub</a>
         <a href="https://huggingface.co/zabibutechnika">Hugging Face</a>
-        <a href="#fikra-model-2">Fikra Model 2</a>
+        <a href="#model-2">Fikra Model 2</a>
         <a href="runtime/">Edge Runtime</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Zabibu Technika. All rights reserved.</span>
-      <span class="mono">FIKRA 01 / 2B · DESIGNED FROM NAIROBI</span>
+      <span class="mono">FIKRA MODEL 2 / 4B · DESIGNED FROM NAIROBI</span>
     </div>
   </div>
 </footer>
