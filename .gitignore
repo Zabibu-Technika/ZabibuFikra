@@ -7,3 +7,6 @@ Thumbs.db
 # Local working files, not website content.
 AI_Workspace/
 building-opencode-clone-with-opencode.json
+
+# Vercel local env (contains tokens)
+.env*

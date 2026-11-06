@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fikra Edge Runtime — the commercial edition | Zabibu Technika</title>
+<meta name="description" content="Fikra Edge Runtime is the commercial edition of the Zabibu Technika edge inference stack: verified core, proprietary modules, managed deployment and support.">
+<meta name="theme-color" content="#050507">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../">
+      <img class="brand-mark" src="../assets/fikra-mark-light.svg" alt="">
+      <span class="brand-word">FIKRA</span>
+      <span class="brand-tag">EDGE RUNTIME</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../#model">The model</a>
+      <a href="../#capabilities">Capabilities</a>
+      <a href="../#run">Run it</a>
+      <a href="../#fikra-model-2">Fikra Model 2</a>
+      <a href="./" aria-current="page">Edge Runtime</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-paper btn-sm" href="https://zabibu.vercel.app/contact">Talk to us <span aria-hidden="true">&#8594;</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero-inner wrap">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">ZABIBU TECHNIKA / FIKRA EDGE RUNTIME</p>
+        <h1>The runtime<br><span class="pink-text">Fikra deserves.</span></h1>
+        <p class="hero-lede">
+          A production-grade deployment layer for Fikra models. The same verified
+          core that ships in <a href="https://phosh.vercel.app">Phosh</a>, plus the
+          proprietary modules, managed distribution and support that make it
+          deployable across fleets of ordinary devices.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-paper" href="https://zabibu.vercel.app/contact">Request access <span aria-hidden="true">&#8594;</span></a>
+          <a class="btn btn-outline-light" href="https://phosh.vercel.app">See the open edition</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>MIT</strong><span>shared core</span></div>
+          <div class="hero-stat"><strong>PRO</strong><span>commercial modules</span></div>
+          <div class="hero-stat"><strong>1</strong><span>C ABI</span></div>
+          <div class="hero-stat"><strong>0</strong><span>cloud dependencies</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="edge-stack">
+          <div class="edge-layer">FIKRA MODEL 01 / 02</div>
+          <div class="edge-connector"></div>
+          <div class="edge-layer main">FIKRA EDGE RUNTIME<small>SESSIONS &#183; CONTEXT &#183; HEAT &#183; TOOLS</small></div>
+          <div class="edge-connector"></div>
+          <div class="edge-row"><span>ARIF</span><span>WEAVER</span><span>EDGE APPS</span></div>
+        </div>
+        <div class="edge-seal">DATA STAYS LOCAL<span>NO CLOUD IN THE LOOP</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section paper">
+    <div class="wrap">
+      <p class="eyebrow">What it is</p>
+      <h2>Middleware for AI that has to survive the device.</h2>
+      <p class="lead">
+        Between the application and the local model sits the part that decides
+        whether on-device inference is usable: memory, heat, context length,
+        session recovery, model delivery and engine choice. Fikra Edge Runtime
+        owns that layer.
+      </p>
+      <div class="cap-grid">
+        <article class="cap">
+          <span class="n">01</span>
+          <h3>Sessions that survive</h3>
+          <p>History and state are written atomically. An app killed by the OS resumes exactly where it stopped, without re-reading the conversation.</p>
+        </article>
+        <article class="cap">
+          <span class="n">02</span>
+          <h3>Context that compacts</h3>
+          <p>A token budget, a pinned system prompt, merging of old turns and eviction — in that order, on turn boundaries, never mid-answer.</p>
+        </article>
+        <article class="cap">
+          <span class="n">03</span>
+          <h3>Speculation that pays</h3>
+          <p>N-gram drafts verified in one pass. On repetitive work it produces more than one token per weight read; on free-form prose it steps aside.</p>
+        </article>
+        <article class="cap">
+          <span class="n">04</span>
+          <h3>Sampling that composes</h3>
+          <p>Temperature, top-k and top-p with exact rejection sampling, so sampled output and speculative verification work together correctly.</p>
+        </article>
+        <article class="cap">
+          <span class="n">05</span>
+          <h3>Engine agnostic</h3>
+          <p>llama.cpp today, other runtimes tomorrow, behind one stable C ABI. Adapters stay below the line; applications never see them.</p>
+        </article>
+        <article class="cap">
+          <span class="n">06</span>
+          <h3>Distribution built for data cost</h3>
+          <p>Signed manifests, resumable and delta downloads, and local sharing over hotspot or USB. One download, many devices.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ink">
+    <div class="wrap">
+      <p class="eyebrow">The stack</p>
+      <h2>One core. Two editions.</h2>
+      <div class="edge-stack" style="max-width:720px;margin:32px auto 0">
+        <div class="edge-layer">APPLICATION / ARIF &#183; WEAVER &#183; EDGE APPS</div>
+        <div class="edge-connector"></div>
+        <div class="edge-layer main">FIKRA EDGE RUNTIME<small>SESSIONS &#183; CONTEXT &#183; GOVERNORS &#183; SPECULATION</small></div>
+        <div class="edge-connector"></div>
+        <div class="edge-layer">llama.cpp / other engines<small>ONE C ABI ABOVE, ANY ENGINE BELOW</small></div>
+      </div>
+      <p class="lead" style="margin-top:32px">
+        The core is shared with the open edition so fixes land once. The commercial
+        edition adds the modules that make fleet deployment practical: accelerated
+        backends, managed distribution, deterministic replay and support.
+      </p>
+    </div>
+  </section>
+
+  <section class="section paper">
+    <div class="wrap">
+      <p class="eyebrow">Editions &amp; licensing</p>
+      <h2>Stated plainly.</h2>
+      <p class="lead">
+        A core shared with an open edition cannot also be secret. That is the
+        open-core model, and it is deliberate.
+      </p>
+      <div class="cap-grid">
+        <article class="cap">
+          <span class="n">OPEN</span>
+          <h3>Phosh</h3>
+          <p>MIT throughout. Full client, runtime, tests and benchmarks. The reference implementation, public on GitHub.</p>
+          <p><a href="https://phosh.vercel.app">phosh.vercel.app</a></p>
+        </article>
+        <article class="cap">
+          <span class="n">PRO</span>
+          <h3>Fikra Edge Runtime</h3>
+          <p>The MIT core plus proprietary modules under a written commercial agreement. Binary distribution available.</p>
+          <p><a href="https://zabibu.vercel.app/contact">Request access</a></p>
+        </article>
+        <article class="cap">
+          <span class="n">DEPS</span>
+          <h3>Third party</h3>
+          <p>llama.cpp and ggml retain their own licenses. Nothing is relicensed by being bundled.</p>
+          <p><a href="https://github.com/ggml-org/llama.cpp">llama.cpp</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="edge-runtime">
+    <div class="wrap">
+      <div class="edge-card">
+        <div class="edge-copy">
+          <span class="coming on-blue">COMMERCIAL / AVAILABLE FOR PILOTS</span>
+          <h2>Deploy Fikra <span class="pink-text">where the work is.</span></h2>
+          <p class="lead">
+            Tell us the device class and the model you intend to run. We will come
+            back with a deployment shape, a performance envelope and a licence that
+            fits.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-paper" href="https://zabibu.vercel.app/contact">Talk to Zabibu Technika <span aria-hidden="true">&#8594;</span></a>
+            <a class="btn btn-outline-light" href="../">Read the model card</a>
+          </div>
+          <p class="edge-note">Nairobi, Kenya / East Africa. Built for the machines people actually have.</p>
+        </div>
+        <div class="edge-art" aria-hidden="true">
+          <div class="edge-seal">DATA STAYS LOCAL<span>NO TELEMETRY</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/fikra-mark-light.svg" alt="">
+        <p><strong>Fikra Edge Runtime.</strong> A Zabibu Technika product. The commercial deployment layer for Fikra models.</p>
+        <p class="loc">Nairobi, Kenya / East Africa</p>
+      </div>
+      <div class="footer-col">
+        <h3>Runtime</h3>
+        <a href="../">Fikra Model 1</a>
+        <a href="../#fikra-model-2">Fikra Model 2</a>
+        <a href="https://phosh.vercel.app">Phosh (open)</a>
+        <a href="https://github.com/teh317/fikra-edge-runtime">GitHub (private)</a>
+      </div>
+      <div class="footer-col">
+        <h3>Ecosystem</h3>
+        <a href="https://zabibuweaver.vercel.app">Weaver</a>
+        <a href="https://arifagent.vercel.app">Zabibu Arif</a>
+        <a href="https://zabibu.vercel.app">Zabibu Technika</a>
+      </div>
+      <div class="footer-col">
+        <h3>Build</h3>
+        <a href="https://github.com/teh317/phosh-cpp">Open source</a>
+        <a href="https://huggingface.co/zabibutechnika">Hugging Face</a>
+        <a href="https://zabibu.vercel.app/contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Zabibu Technika. All rights reserved.</span>
+      <span class="mono">FIKRA EDGE / DESIGNED FROM NAIROBI</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
