@@ -6,6 +6,7 @@ export default async function handler(req, res) {
   try {
     const raw = req.query.path ?? req.query["...path"];
     const parts = Array.isArray(raw) ? raw : raw ? [raw] : [];
+    console.log("fikra-proxy", req.url, JSON.stringify(req.query), parts.join("/"));
     const target = new URL(`${SPACE}/${parts.join("/")}`);
     const incoming = new URL(req.url, `https://${req.headers.host}`);
     target.search = incoming.search;
