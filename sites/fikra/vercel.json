@@ -5,5 +5,11 @@
       "source": "/api/space/:path+",
       "destination": "/api/space?path=:path+"
     }
+  ],
+  "crons": [
+    {
+      "path": "/api/warm",
+      "schedule": "0 2 * * *"
+    }
   ]
 }
