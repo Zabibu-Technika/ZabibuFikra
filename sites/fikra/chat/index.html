@@ -64,7 +64,10 @@
             FIKRA MODEL 2 · 4B
             <span class="chat-tag">ZERO GPU</span>
           </div>
-          <button class="chat-clear" id="clear" type="button">Clear chat</button>
+          <div class="chat-top-actions">
+            <a class="chat-limits-link" href="#limits">Limits</a>
+            <button class="chat-clear" id="clear" type="button">Clear chat</button>
+          </div>
         </div>
 
         <div class="chat-log" id="log" role="log" aria-live="polite" aria-label="Chat with Fikra Model 2" tabindex="0">
@@ -121,6 +124,72 @@
         Running on <a href="https://huggingface.co/spaces/zabibutechnikaacc/fikra-model-2-demo">Hugging Face Spaces</a>.
         Anonymous visitors share a daily GPU quota; if it runs out, try again tomorrow or
         <a href="../#run">run Fikra locally</a>.
+      </p>
+    </div>
+  </section>
+
+  <section id="limits" class="chat-limits">
+    <div class="wrap">
+      <p class="eyebrow">Limits / before you rely on it</p>
+      <h2>What this demo is not.</h2>
+      <p class="lead">
+        The model is real. The demo is still a demo. Here is what to expect before you
+        use it for anything important.
+      </p>
+
+      <div class="limits-grid">
+        <article class="limit-card">
+          <span class="n">01</span>
+          <h3>Shared GPU quota</h3>
+          <p>Anonymous visitors get about 2 minutes of GPU per day. When it runs out, the live demo stops until tomorrow. A free Hugging Face account gets more.</p>
+        </article>
+        <article class="limit-card">
+          <span class="n">02</span>
+          <h3>Cold starts and mobile tabs</h3>
+          <p>The Space sleeps when idle. The first reply can take up to two minutes while it wakes. On a phone, keep this tab open — backgrounding the browser can drop the connection.</p>
+        </article>
+        <article class="limit-card">
+          <span class="n">03</span>
+          <h3>Do not paste secrets</h3>
+          <p>Prompts go to a public Hugging Face Space. This page keeps history in memory only, but do not paste passwords, IDs, or private data.</p>
+        </article>
+        <article class="limit-card">
+          <span class="n">04</span>
+          <h3>It can be wrong</h3>
+          <p>A 4B model will hallucinate on specialized domains. It is not a replacement for retrieval or a curated knowledge base.</p>
+        </article>
+        <article class="limit-card">
+          <span class="n">05</span>
+          <h3>No live information</h3>
+          <p>Recency stops at the training data. Ask for current prices, news, or law and it may invent an answer.</p>
+        </article>
+        <article class="limit-card">
+          <span class="n">06</span>
+          <h3>Not offline here</h3>
+          <p>The website demo needs a connection. For offline use, download the Q4_K_M GGUF and run it with llama.cpp on your own machine.</p>
+        </article>
+      </div>
+
+      <div class="limits-cta">
+        <div>
+          <p class="limits-cta-kicker">Want it without the queue?</p>
+          <h3>Run Fikra Model 2 on your own machine.</h3>
+          <p>
+            The Q4_K_M GGUF is 2.71 GB and runs on CPU. The fp16 weights, benchmarks,
+            and the full model card are on Hugging Face.
+          </p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-blue" href="../#run">Run it locally <span aria-hidden="true">→</span></a>
+          <a class="btn btn-outline-light" href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF">Download GGUF</a>
+          <a class="btn btn-outline-light" href="https://zabibu.vercel.app/contact">Talk to us</a>
+        </div>
+      </div>
+
+      <p class="fine">
+        Full limitations are in the
+        <a href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B#limitations">model card</a>.
+        Fikra is Apache 2.0. The demo Space is hosted by Hugging Face.
       </p>
     </div>
   </section>
