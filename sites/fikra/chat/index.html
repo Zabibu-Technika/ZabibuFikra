@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talk to Fikra Model 2 — 4B · live demo</title>
+<meta name="description" content="Chat with Zabibu Fikra Model 2 – 4B live. The 4B on-device model runs on a Hugging Face ZeroGPU Space. Desktop users can talk to it directly; mobile gets a scripted preview.">
+<meta name="theme-color" content="#050507">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="chat.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../">
+      <img class="brand-mark" src="../assets/fikra-mark-light.svg" alt="">
+      <span class="brand-word">FIKRA</span>
+      <span class="brand-tag">LIVE DEMO</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../#model-2">Model 2</a>
+      <a href="../#benchmarks">Benchmarks</a>
+      <a href="../#model-1">Model 1</a>
+      <a href="../#run">Run it</a>
+      <a href="./" aria-current="page">Chat</a>
+      <a href="../runtime/">Edge Runtime</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-paper btn-sm" href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B">Get Model 2 <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="chat-hero">
+    <div class="wrap">
+      <span class="coming available">LIVE / ZERO GPU</span>
+      <h1>Talk to <span class="pink-text">Fikra.</span></h1>
+      <p class="lead">
+        The real <strong>4B model</strong>, running on a Hugging Face ZeroGPU Space.
+        Ask in English or Swahili. The demo does not store your prompts.
+      </p>
+      <div class="chat-hero-facts">
+        <span>4B parameters</span>
+        <span>262k context</span>
+        <span>EN + SW</span>
+        <span>Apache 2.0</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="chat-section">
+    <div class="wrap">
+      <aside class="mobile-demo" id="mobile-demo" hidden>
+        <span class="mobile-tag">PREVIEW / DESKTOP ONLY</span>
+        <h2>This demo runs the full 4B model on a desktop.</h2>
+        <p>
+          You are on a mobile device, so this is a scripted preview. Open this page on a
+          desktop to chat with Fikra Model 2 live — or run the model locally with llama.cpp.
+        </p>
+        <div class="mobile-actions">
+          <button class="btn btn-blue" type="button" id="copy-link">Copy desktop link</button>
+          <a class="btn btn-outline-dark" href="../#run">Run it locally</a>
+        </div>
+      </aside>
+
+      <div class="chat-shell">
+        <div class="chat-top">
+          <div class="chat-id">
+            <span class="dot" aria-hidden="true"></span>
+            FIKRA MODEL 2 · 4B
+            <span class="chat-tag">ZERO GPU</span>
+          </div>
+          <button class="chat-clear" id="clear" type="button">Clear chat</button>
+        </div>
+
+        <div class="chat-log" id="log" role="log" aria-live="polite" aria-label="Chat with Fikra Model 2">
+          <div class="msg msg-bot">
+            <span class="msg-meta">Fikra 4B</span>
+            <div class="bubble">Habari. I am Fikra Model 2 — a 4B on-device model built by Zabibu Technika in Nairobi. Ask me anything in English or Swahili.</div>
+          </div>
+        </div>
+
+        <div class="chat-suggestions" id="suggestions" aria-label="Suggested prompts">
+          <button type="button">Who are you, and where were you built?</button>
+          <button type="button">Eleza kwa Kiswahili kwa nini edge AI ni muhimu Afrika.</button>
+          <button type="button">Write a short Python function that reverses a string.</button>
+        </div>
+
+        <form class="chat-composer" id="composer">
+          <label class="sr-only" for="msg">Message Fikra</label>
+          <textarea id="msg" rows="1" maxlength="2000" placeholder="Ask Fikra anything…" autocomplete="off"></textarea>
+          <button class="btn btn-blue" type="submit" id="send">Send</button>
+        </form>
+
+        <p class="chat-status" id="status" role="status">
+          Connects on your first message. The first reply can take up to a minute while the Space wakes.
+        </p>
+
+        <noscript>
+          <p class="chat-noscript">Enable JavaScript to chat with Fikra. The desktop demo connects to a public ZeroGPU Space.</p>
+        </noscript>
+      </div>
+    </div>
+  </section>
+
+  <section class="chat-how">
+    <div class="wrap">
+      <p class="eyebrow">How this works</p>
+      <div class="how-grid">
+        <article>
+          <span class="n">01</span>
+          <h3>ZeroGPU</h3>
+          <p>The Space borrows a shared GPU for each reply, then releases it. That is why the first message can be slow and later ones are quick.</p>
+        </article>
+        <article>
+          <span class="n">02</span>
+          <h3>Nothing is stored</h3>
+          <p>This page keeps the conversation in memory only. The demo app does not save prompts or replies to a database.</p>
+        </article>
+        <article>
+          <span class="n">03</span>
+          <h3>Open weights</h3>
+          <p>The model is Apache 2.0. Download the fp16 weights or the 2.71 GB Q4_K_M GGUF and run it on your own machine.</p>
+        </article>
+      </div>
+      <p class="fine">
+        Running on <a href="https://huggingface.co/spaces/zabibutechnikaacc/fikra-model-2-demo">Hugging Face Spaces</a>.
+        Anonymous visitors share a daily GPU quota; if it runs out, try again tomorrow or
+        <a href="../#run">run Fikra locally</a>.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/fikra-mark-light.svg" alt="">
+        <p><strong>Fikra Model 2 – 4B.</strong> A Zabibu Technika model, made by Tehillah Kachila. Built in Nairobi for the machines people actually have.</p>
+        <p class="loc">Nairobi, Kenya / East Africa</p>
+      </div>
+      <div class="footer-col">
+        <h3>Model</h3>
+        <a href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B">Model 2 card</a>
+        <a href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF">GGUF repo</a>
+        <a href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Model 1 card</a>
+        <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>
+      </div>
+      <div class="footer-col">
+        <h3>Ecosystem</h3>
+        <a href="https://zabibuweaver.vercel.app">Weaver</a>
+        <a href="https://arifagent.vercel.app">Zabibu Arif</a>
+        <a href="https://zabibu.vercel.app">Zabibu Technika</a>
+      </div>
+      <div class="footer-col">
+        <h3>Build</h3>
+        <a href="https://github.com/Zabibu-Technika/ZabibuFikra">GitHub</a>
+        <a href="https://huggingface.co/zabibutechnika">Hugging Face</a>
+        <a href="../#model-2">Fikra Model 2</a>
+        <a href="../runtime/">Edge Runtime</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Zabibu Technika. All rights reserved.</span>
+      <span class="mono">FIKRA MODEL 2 / 4B · DESIGNED FROM NAIROBI</span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="chat.js"></script>
+</body>
+</html>
