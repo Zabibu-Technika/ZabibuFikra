@@ -82,7 +82,7 @@ function resetChat() {
   log.innerHTML = "";
   addMessage("bot", GREETING);
   setStatus(
-    "Connects on your first message. The first reply can take up to a minute while the Space wakes."
+    "Connects on your first message. The first reply can take up to two minutes while the Space wakes."
   );
 }
 
@@ -239,7 +239,7 @@ if (isMobile) {
   bootMobilePreview();
 } else {
   setStatus(
-    "Connects on your first message. The first reply can take up to a minute while the Space wakes."
+    "Connects on your first message. The first reply can take up to two minutes while the Space wakes."
   );
 }
 
