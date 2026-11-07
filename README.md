@@ -12,7 +12,12 @@ Fikra.
 - `sites/fikra/chat/` — the live demo at <https://zabibufikra.vercel.app/chat/>.
   Desktop and mobile both talk to Zabibu Fikra Model 2 – 4B through a public
   ZeroGPU Space (`zabibutechnikaacc/fikra-model-2-demo`). The model runs on the
-  Space, not on the visitor's device.
+  Space, not on the visitor's device. The same chat is embedded on the main page
+  at `#chat`.
+- `sites/fikra/api/space.js` — the Vercel function that proxies `/api/space/*`
+  to the Space with the `HF_TOKEN` environment variable. `api/warm.js` keeps the
+  Space awake with a daily Vercel cron. Set `HF_TOKEN` in the Vercel project
+  before deploying.
 
 The product sites live with their products, not here:
 
