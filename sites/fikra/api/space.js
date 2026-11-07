@@ -5,11 +5,20 @@ const SPACE = "https://zabibutechnikaacc-fikra-model-2-demo.hf.space";
 export default async function handler(req, res) {
   try {
     const raw = req.query.path ?? req.query["...path"];
-    const parts = Array.isArray(raw) ? raw : raw ? [raw] : [];
-    console.log("fikra-proxy", req.url, JSON.stringify(req.query), parts.join("/"));
-    const target = new URL(`${SPACE}/${parts.join("/")}`);
-    const incoming = new URL(req.url, `https://${req.headers.host}`);
-    target.search = incoming.search;
+    const path = Array.isArray(raw) ? raw.join("/") : raw || "";
+    console.log("fikra-proxy", req.url, JSON.stringify(req.query), path);
+
+    const target = new URL(`${SPACE}/${path}`);
+    const params = new URLSearchParams();
+    for (const [key, value] of Object.entries(req.query)) {
+      if (key === "path" || key === "...path") continue;
+      if (Array.isArray(value)) {
+        value.forEach((item) => params.append(key, item));
+      } else if (value != null) {
+        params.append(key, value);
+      }
+    }
+    target.search = params.toString();
 
     const headers = { ...req.headers };
     for (const name of [
