@@ -1,12 +1,11 @@
 /* ============================================================
    Fikra Model 2 — live chat
    Talks to the public ZeroGPU Space through @gradio/client.
-   Desktop only. Mobile gets a scripted preview.
+   Works on desktop and mobile; the model runs on the Space.
    ============================================================ */
 
 const SPACE_ID = "zabibutechnikaacc/fikra-model-2-demo";
 const SPACE_URL = "https://huggingface.co/spaces/zabibutechnikaacc/fikra-model-2-demo";
-const PAGE_URL = "https://zabibufikra.vercel.app/chat/";
 
 const GREETING =
   "Habari. I am Fikra Model 2 — a 4B on-device model built by Zabibu Technika in Nairobi. Ask me anything in English or Swahili.";
@@ -18,10 +17,8 @@ const sendBtn = document.getElementById("send");
 const statusEl = document.getElementById("status");
 const suggestions = document.getElementById("suggestions");
 const clearBtn = document.getElementById("clear");
-const mobileDemo = document.getElementById("mobile-demo");
-const copyBtn = document.getElementById("copy-link");
 
-const isMobile = window.matchMedia("(max-width: 820px)").matches;
+const finePointer = window.matchMedia("(pointer: fine)").matches;
 
 let history = [];
 let client = null;
@@ -179,28 +176,8 @@ async function send(text) {
   } finally {
     busy = false;
     sendBtn.disabled = false;
-    input.focus();
+    if (finePointer) input.focus();
   }
-}
-
-function bootMobilePreview() {
-  mobileDemo.hidden = false;
-  form.hidden = true;
-  suggestions.hidden = true;
-  clearBtn.hidden = true;
-
-  addMessage("user", "Who are you, and where were you built?");
-  addMessage(
-    "bot",
-    "I am Fikra Model 2 — a 4B on-device model built by Zabibu Technika in Nairobi, Kenya. I run locally, work offline, and answer in English or Swahili."
-  );
-  addMessage("user", "Eleza kwa Kiswahili kwa nini edge AI ni muhimu Afrika.");
-  addMessage(
-    "bot",
-    "Edge AI inalinda faragha na kufanya kazi bila internet. Data haitoki kwenye kifaa chako, na gharama za cloud zinapungua. Hii ni muhimu kwa maeneo yenye miundombinu dhaifu."
-  );
-
-  setStatus("Preview mode. Open this page on a desktop to run the real model.");
 }
 
 form.addEventListener("submit", (event) => {
@@ -224,24 +201,9 @@ suggestions.addEventListener("click", (event) => {
 
 clearBtn.addEventListener("click", resetChat);
 
-if (copyBtn) {
-  copyBtn.addEventListener("click", async () => {
-    try {
-      await navigator.clipboard.writeText(PAGE_URL);
-      copyBtn.textContent = "Copied";
-    } catch (err) {
-      window.prompt("Copy this link", PAGE_URL);
-    }
-  });
-}
-
-if (isMobile) {
-  bootMobilePreview();
-} else {
-  setStatus(
-    "Connects on your first message. The first reply can take up to two minutes while the Space wakes."
-  );
-}
+setStatus(
+  "Connects on your first message. The first reply can take up to two minutes while the Space wakes."
+);
 
 /* Exposed for debugging in the console. */
 window.fikra = { SPACE_ID, SPACE_URL, resetChat };

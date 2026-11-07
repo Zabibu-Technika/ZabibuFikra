@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Talk to Fikra Model 2 — 4B · live demo</title>
-<meta name="description" content="Chat with Zabibu Fikra Model 2 – 4B live. The 4B on-device model runs on a Hugging Face ZeroGPU Space. Desktop users can talk to it directly; mobile gets a scripted preview.">
+<meta name="description" content="Chat with Zabibu Fikra Model 2 – 4B live on desktop or mobile. The 4B on-device model runs on a Hugging Face ZeroGPU Space.">
 <meta name="theme-color" content="#050507">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +43,8 @@
       <h1>Talk to <span class="pink-text">Fikra.</span></h1>
       <p class="lead">
         The real <strong>4B model</strong>, running on a Hugging Face ZeroGPU Space.
-        Ask in English or Swahili. The demo does not store your prompts.
+        Works on desktop and mobile. Ask in English or Swahili. The demo does not
+        store your prompts.
       </p>
       <div class="chat-hero-facts">
         <span>4B parameters</span>
@@ -56,19 +57,6 @@
 
   <section class="chat-section">
     <div class="wrap">
-      <aside class="mobile-demo" id="mobile-demo" hidden>
-        <span class="mobile-tag">PREVIEW / DESKTOP ONLY</span>
-        <h2>This demo runs the full 4B model on a desktop.</h2>
-        <p>
-          You are on a mobile device, so this is a scripted preview. Open this page on a
-          desktop to chat with Fikra Model 2 live — or run the model locally with llama.cpp.
-        </p>
-        <div class="mobile-actions">
-          <button class="btn btn-blue" type="button" id="copy-link">Copy desktop link</button>
-          <a class="btn btn-outline-dark" href="../#run">Run it locally</a>
-        </div>
-      </aside>
-
       <div class="chat-shell">
         <div class="chat-top">
           <div class="chat-id">
@@ -79,7 +67,7 @@
           <button class="chat-clear" id="clear" type="button">Clear chat</button>
         </div>
 
-        <div class="chat-log" id="log" role="log" aria-live="polite" aria-label="Chat with Fikra Model 2">
+        <div class="chat-log" id="log" role="log" aria-live="polite" aria-label="Chat with Fikra Model 2" tabindex="0">
           <div class="msg msg-bot">
             <span class="msg-meta">Fikra 4B</span>
             <div class="bubble">Habari. I am Fikra Model 2 — a 4B on-device model built by Zabibu Technika in Nairobi. Ask me anything in English or Swahili.</div>
@@ -103,7 +91,7 @@
         </p>
 
         <noscript>
-          <p class="chat-noscript">Enable JavaScript to chat with Fikra. The desktop demo connects to a public ZeroGPU Space.</p>
+          <p class="chat-noscript">Enable JavaScript to chat with Fikra. The demo connects to a public ZeroGPU Space.</p>
         </noscript>
       </div>
     </div>
@@ -116,7 +104,7 @@
         <article>
           <span class="n">01</span>
           <h3>ZeroGPU</h3>
-          <p>The Space borrows a shared GPU for each reply, then releases it. That is why the first message can be slow and later ones are quick.</p>
+          <p>The Space borrows a shared GPU for each reply, then releases it. It works the same on a phone or a laptop — the model runs on the Space, not on your device.</p>
         </article>
         <article>
           <span class="n">02</span>

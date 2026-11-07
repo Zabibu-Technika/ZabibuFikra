@@ -10,9 +10,9 @@ Fikra.
   <https://zabibufikra.vercel.app>. It sells the released Zabibu Fikra Model 2 – 4B,
   keeps Model 1 available, and teases the Fikra Edge Runtime.
 - `sites/fikra/chat/` — the live demo at <https://zabibufikra.vercel.app/chat/>.
-  Desktop talks to Zabibu Fikra Model 2 – 4B through a public ZeroGPU Space
-  (`zabibutechnikaacc/fikra-model-2-demo`); mobile gets a scripted preview with a
-  "open on desktop" prompt.
+  Desktop and mobile both talk to Zabibu Fikra Model 2 – 4B through a public
+  ZeroGPU Space (`zabibutechnikaacc/fikra-model-2-demo`). The model runs on the
+  Space, not on the visitor's device.
 
 The product sites live with their products, not here:
 
