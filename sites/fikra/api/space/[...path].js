@@ -4,7 +4,7 @@ const SPACE = "https://zabibutechnikaacc-fikra-model-2-demo.hf.space";
 
 export default async function handler(req, res) {
   try {
-    const raw = req.query.path;
+    const raw = req.query.path ?? req.query["...path"];
     const parts = Array.isArray(raw) ? raw : raw ? [raw] : [];
     const target = new URL(`${SPACE}/${parts.join("/")}`);
     const incoming = new URL(req.url, `https://${req.headers.host}`);
