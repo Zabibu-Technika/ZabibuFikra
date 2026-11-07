@@ -57,7 +57,15 @@
 
   <section class="chat-section">
     <div class="wrap">
-      <div class="chat-shell">
+      <div class="chat-notice">
+        <div>
+          <strong>Before you chat</strong>
+          <p>Shared daily GPU quota · the first reply can take up to 2 minutes · do not paste secrets · the model can hallucinate.</p>
+        </div>
+        <a href="#limits">Full limits ↓</a>
+      </div>
+
+      <div class="chat-shell" data-chat data-space-src="/api/space" data-run-href="../#run" data-limits-href="#limits">
         <div class="chat-top">
           <div class="chat-id">
             <span class="dot" aria-hidden="true"></span>
@@ -66,30 +74,30 @@
           </div>
           <div class="chat-top-actions">
             <a class="chat-limits-link" href="#limits">Limits</a>
-            <button class="chat-clear" id="clear" type="button">Clear chat</button>
+            <button class="chat-clear" id="clear" type="button" data-chat-clear>Clear chat</button>
           </div>
         </div>
 
-        <div class="chat-log" id="log" role="log" aria-live="polite" aria-label="Chat with Fikra Model 2" tabindex="0">
+        <div class="chat-log" id="log" role="log" aria-live="polite" aria-label="Chat with Fikra Model 2" tabindex="0" data-chat-log>
           <div class="msg msg-bot">
             <span class="msg-meta">Fikra 4B</span>
             <div class="bubble">Habari. I am Fikra Model 2 — a 4B on-device model built by Zabibu Technika in Nairobi. Ask me anything in English or Swahili.</div>
           </div>
         </div>
 
-        <div class="chat-suggestions" id="suggestions" aria-label="Suggested prompts">
+        <div class="chat-suggestions" id="suggestions" aria-label="Suggested prompts" data-chat-suggestions>
           <button type="button">Who are you, and where were you built?</button>
           <button type="button">Eleza kwa Kiswahili kwa nini edge AI ni muhimu Afrika.</button>
           <button type="button">Write a short Python function that reverses a string.</button>
         </div>
 
-        <form class="chat-composer" id="composer">
+        <form class="chat-composer" id="composer" data-chat-form>
           <label class="sr-only" for="msg">Message Fikra</label>
-          <textarea id="msg" rows="1" maxlength="2000" placeholder="Ask Fikra anything…" autocomplete="off"></textarea>
-          <button class="btn btn-blue" type="submit" id="send">Send</button>
+          <textarea id="msg" rows="1" maxlength="2000" placeholder="Ask Fikra anything…" autocomplete="off" data-chat-input></textarea>
+          <button class="btn btn-blue" type="submit" id="send" data-chat-send>Send</button>
         </form>
 
-        <p class="chat-status" id="status" role="status">
+        <p class="chat-status" id="status" role="status" data-chat-status>
           Connects on your first message. The first reply can take up to two minutes while the Space wakes.
         </p>
 
@@ -122,7 +130,7 @@
       </div>
       <p class="fine">
         Running on <a href="https://huggingface.co/spaces/zabibutechnikaacc/fikra-model-2-demo">Hugging Face Spaces</a>.
-        Anonymous visitors share a daily GPU quota; if it runs out, try again tomorrow or
+        The demo shares a daily GPU quota; if it runs out, try again tomorrow or
         <a href="../#run">run Fikra locally</a>.
       </p>
     </div>
@@ -141,7 +149,7 @@
         <article class="limit-card">
           <span class="n">01</span>
           <h3>Shared GPU quota</h3>
-          <p>Anonymous visitors get about 2 minutes of GPU per day. When it runs out, the live demo stops until tomorrow. A free Hugging Face account gets more.</p>
+          <p>The live demo runs on a shared daily GPU quota. When it runs out, the demo pauses until tomorrow. Logged-in Hugging Face accounts get a larger quota on the Space itself.</p>
         </article>
         <article class="limit-card">
           <span class="n">02</span>

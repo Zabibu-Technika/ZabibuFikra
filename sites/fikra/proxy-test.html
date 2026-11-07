@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>proxy test</title></head>
+<body>
+<pre id="out">loading…</pre>
+<script type="module">
+  const out = document.getElementById("out");
+  try {
+    const { Client } = await import("https://cdn.jsdelivr.net/npm/@gradio/client@2.7.2/dist/index.min.js");
+    const app = await Client.connect("http://127.0.0.1:8127");
+    out.textContent = "connected\n";
+    const result = await app.predict("/chat", ["Who are you, and where were you built?", []]);
+    out.textContent += JSON.stringify(result.data, null, 2);
+  } catch (err) {
+    out.textContent = "ERROR: " + (err && err.stack ? err.stack : err);
+  }
+</script>
+</body>
+</html>

@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="chat/chat.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -27,7 +28,7 @@
       <a href="#benchmarks">Benchmarks</a>
       <a href="#model-1">Model 1</a>
       <a href="#run">Run it</a>
-      <a href="chat/">Chat</a>
+      <a href="#chat">Chat</a>
       <a href="runtime/">Edge Runtime</a>
     </nav>
     <div class="header-actions">
@@ -49,7 +50,7 @@
           <strong>Apache 2.0</strong>.
         </p>
         <div class="cta-row">
-          <a class="btn btn-paper" href="chat/">Talk to Fikra <span aria-hidden="true">→</span></a>
+          <a class="btn btn-paper" href="#chat">Talk to Fikra <span aria-hidden="true">→</span></a>
           <a class="btn btn-outline-light" href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B">Get Model 2 <span aria-hidden="true">↗</span></a>
           <a class="btn btn-outline-light" href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF">Download GGUF</a>
         </div>
@@ -392,6 +393,69 @@ tok = AutoTokenizer.from_pretrained(
     </div>
   </section>
 
+  <section id="chat" class="section paper">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Try it / live demo</p>
+        <h2>Talk to Fikra <span class="blue-text">right here.</span></h2>
+        <p class="lead">
+          The real 4B model, running on a Hugging Face ZeroGPU Space. Same demo as the
+          full chat page, embedded on this page.
+        </p>
+      </div>
+
+      <div class="chat-notice">
+        <div>
+          <strong>Before you chat</strong>
+          <p>Shared daily GPU quota · the first reply can take up to 2 minutes · do not paste secrets · the model can hallucinate.</p>
+        </div>
+        <a href="chat/#limits">Full limits ↗</a>
+      </div>
+
+      <div class="chat-shell" data-chat data-space-src="/api/space" data-run-href="#run" data-limits-href="chat/#limits">
+        <div class="chat-top">
+          <div class="chat-id">
+            <span class="dot" aria-hidden="true"></span>
+            FIKRA MODEL 2 · 4B
+            <span class="chat-tag">ZERO GPU</span>
+          </div>
+          <div class="chat-top-actions">
+            <a class="chat-limits-link" href="chat/#limits">Limits</a>
+            <button class="chat-clear" type="button" data-chat-clear>Clear chat</button>
+          </div>
+        </div>
+
+        <div class="chat-log" role="log" aria-live="polite" aria-label="Chat with Fikra Model 2" tabindex="0" data-chat-log>
+          <div class="msg msg-bot">
+            <span class="msg-meta">Fikra 4B</span>
+            <div class="bubble">Habari. I am Fikra Model 2 — a 4B on-device model built by Zabibu Technika in Nairobi. Ask me anything in English or Swahili.</div>
+          </div>
+        </div>
+
+        <div class="chat-suggestions" aria-label="Suggested prompts" data-chat-suggestions>
+          <button type="button">Who are you, and where were you built?</button>
+          <button type="button">Eleza kwa Kiswahili kwa nini edge AI ni muhimu Afrika.</button>
+          <button type="button">Write a short Python function that reverses a string.</button>
+        </div>
+
+        <form class="chat-composer" data-chat-form>
+          <label class="sr-only" for="chat-msg">Message Fikra</label>
+          <textarea id="chat-msg" rows="1" maxlength="2000" placeholder="Ask Fikra anything…" autocomplete="off" data-chat-input></textarea>
+          <button class="btn btn-blue" type="submit" data-chat-send>Send</button>
+        </form>
+
+        <p class="chat-status" role="status" data-chat-status>
+          Connects on your first message. The first reply can take up to two minutes while the Space wakes.
+        </p>
+      </div>
+
+      <p class="fine">
+        Prefer a bigger view? <a href="chat/">Open the full chat page</a> ·
+        <a href="#run">Run it locally</a>.
+      </p>
+    </div>
+  </section>
+
   <section id="edge-runtime" class="edge-runtime">
     <div class="wrap">
       <div class="edge-card">
@@ -466,7 +530,7 @@ tok = AutoTokenizer.from_pretrained(
         <h3>Build</h3>
         <a href="https://github.com/Zabibu-Technika/ZabibuFikra">GitHub</a>
         <a href="https://huggingface.co/zabibutechnika">Hugging Face</a>
-        <a href="chat/">Talk to Fikra</a>
+        <a href="#chat">Talk to Fikra</a>
         <a href="#model-2">Fikra Model 2</a>
         <a href="runtime/">Edge Runtime</a>
       </div>
@@ -477,5 +541,6 @@ tok = AutoTokenizer.from_pretrained(
     </div>
   </div>
 </footer>
+<script type="module" src="chat/chat.js"></script>
 </body>
 </html>

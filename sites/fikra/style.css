@@ -1013,7 +1013,7 @@ h3 {
 }
 
 .metric.hot strong { color: var(--blue); }
-.metric.pink strong { color: #b32bd6; }
+.metric.pink strong { color: #8a1fa8; }
 
 .score-grid {
   display: grid;
