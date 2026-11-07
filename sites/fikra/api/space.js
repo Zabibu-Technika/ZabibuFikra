@@ -5,8 +5,7 @@ const SPACE = "https://zabibutechnikaacc-fikra-model-2-demo.hf.space";
 export default async function handler(req, res) {
   try {
     const raw = req.query.path ?? req.query["...path"];
-    const path = Array.isArray(raw) ? raw.join("/") : raw || "";
-    console.log("fikra-proxy", req.url, JSON.stringify(req.query), path);
+    const path = (Array.isArray(raw) ? raw.join("/") : raw || "").trim();
 
     const target = new URL(`${SPACE}/${path}`);
     const params = new URLSearchParams();
