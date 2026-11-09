@@ -1,0 +1,103 @@
+# Zabibu Fikra — full reference
+
+> Zabibu Fikra Model 2 – 4B (internal: fikra-v2-e4) is a 4B-parameter instruction-tuned language model developed by Zabibu Technika in Nairobi, Kenya. It is a Fikra-specialized fine-tune built on zabibutechnika/fikra-v2-e3, which derives from Qwen/Qwen3.5-4B. It is designed for private, on-device, offline-first deployment with Pan-African contextual awareness.
+
+## Release
+
+- Release date: 2026-11-06
+- License: Apache 2.0
+- Base license: Qwen/Qwen3.5-4B
+- Architecture: Qwen3_5ForCausalLM
+- Parameters: 4,205,751,296
+- Context window: 262,144 tokens
+- Languages: English, Swahili, English–Swahili code-switching
+- fp16 weights: 8.43 GB
+- GGUF Q4_K_M: 2.71 GB
+- GGUF F16: 8.42 GB
+- Chat format: the model card's chat template
+- Recommended CPU runtime: llama.cpp
+
+## Evaluation
+
+Fikra release suite (115 cases):
+
+- Auto-checked: 105/115 (91.3%)
+- Borderline rubric review: 0
+- Held-out paraphrases: 9/10 (90.0%)
+- Baseline e3 checkpoint: 88.7%
+- Fikra-specific gain: +2.6 points over e3
+
+Category scores:
+
+- identity_direct: 8/8
+- identity_swahili: 4/4
+- uhi_protocol: 5/5
+- safety_boundary: 3/3
+- longform: 2/2
+- tool_abi: 4/4
+
+Public benchmarks (lm-evaluation-harness 0.4.13, 10 samples per task, fp16, Kaggle 2xT4):
+
+| Model | Parameters | MMLU | HellaSwag |
+|---|---|---|---|
+| Fikra Model 2 – 4B | 4.2B | 75.5% | 68.0% |
+| Fikra Model 1 – 2B | 2B | 36.0% | 40.0% |
+| Qwen2.5-3B-Instruct | 3B | 68.8% | 40.0% |
+
+The numbers are not size-normalized. Most of the MMLU delta from Model 1 comes from the 2B to 4B base upgrade, not from Fikra training alone.
+
+## Run
+
+llama.cpp CLI:
+
+```bash
+llama-cli -hf zabibutechnika/Fikra-Model-2-4B-GGUF:Fikra-Model-2-4B-Q4_K_M.gguf \
+  -p "Who are you?" --temp 0
+```
+
+OpenAI-compatible server:
+
+```bash
+llama-server -hf zabibutechnika/Fikra-Model-2-4B-GGUF:Fikra-Model-2-4B-Q4_K_M.gguf \
+  --port 8080 -c 8192 -ngl 99
+```
+
+Transformers:
+
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
+
+model = AutoModelForCausalLM.from_pretrained(
+    "zabibutechnika/Fikra-Model-2-4B",
+    dtype=torch.float16,
+    device_map="auto",
+)
+tok = AutoTokenizer.from_pretrained("zabibutechnika/Fikra-Model-2-4B")
+msgs = [{"role": "user", "content": "Who are you, and where were you built?"}]
+prompt = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
+inputs = tok(prompt, return_tensors="pt").to(model.device)
+out = model.generate(**inputs, max_new_tokens=400, do_sample=False,
+                     pad_token_id=tok.eos_token_id)
+print(tok.decode(out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True))
+```
+
+## Limitations
+
+- No cross-language Swahili benchmark is published.
+- No live information; recency is limited to training data.
+- The 4B model can hallucinate on specialized domains and is not a replacement for retrieval.
+- The model occasionally emits `<think>...</think>` blocks in visible output; strip them.
+- Inherited Qwen/Qwen3.5-4B biases; not audited here.
+- Q4_K_M has not been re-evaluated; expect 1–3 points vs fp16 on short-form evals.
+- No unresolved safety case in the auto-checked suite, but no external red-team has been done.
+
+## Pages
+
+- https://zabibufikra.vercel.app/ — model card and benchmarks
+- https://zabibufikra.vercel.app/chat/ — live chat demo and limits
+- https://zabibufikra.vercel.app/runtime/ — Fikra Edge Runtime
+
+## Contact
+
+Zabibu Technika, Nairobi, Kenya — https://zabibu.vercel.app/contact

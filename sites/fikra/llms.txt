@@ -1,0 +1,45 @@
+# Zabibu Fikra
+
+> Zabibu Fikra Model 2 – 4B is an Apache 2.0, 4B-parameter instruction-tuned language model built in Nairobi, Kenya for private, on-device, offline-first use. It supports English and Swahili, has a 262,144-token context window, and is available as fp16 weights and GGUF (Q4_K_M and F16).
+
+## Model facts
+
+- Name: Zabibu Fikra Model 2 – 4B
+- Internal name: fikra-v2-e4
+- Parameters: 4,205,751,296 (4B)
+- Context: 262,144 tokens
+- Languages: English and Swahili
+- Base: Qwen/Qwen3.5-4B, via zabibutechnika/fikra-v2-e3
+- License: Apache 2.0
+- Release date: 2026-11-06
+- fp16 weights: 8.43 GB
+- GGUF: Q4_K_M 2.71 GB, F16 8.42 GB
+- Benchmarks: MMLU 75.5%, HellaSwag 68.0%, Fikra release suite 91.3% (105/115), held-out paraphrases 90.0% (9/10)
+- Previous release: Zabibu Fikra Model 1 – 2B, 131,072-token context, Gemma-4-2B-it base, Zabibu Technika License 1.1
+
+## Pages
+
+- [Fikra Model 2 – 4B](https://zabibufikra.vercel.app/): model card, capabilities, benchmarks, limitations, Model 1, and run instructions.
+- [Live chat demo](https://zabibufikra.vercel.app/chat/): desktop and mobile chat with the real model through a Hugging Face ZeroGPU Space, with limits and local-run fallbacks.
+- [Fikra Edge Runtime](https://zabibufikra.vercel.app/runtime/): the commercial deployment layer for Fikra models.
+
+## Weights and source
+
+- [Model 2 on Hugging Face](https://huggingface.co/zabibutechnika/Fikra-Model-2-4B)
+- [Model 2 GGUF](https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF)
+- [Model 1 on Hugging Face](https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B)
+- [Source repository](https://github.com/Zabibu-Technika/ZabibuFikra)
+
+## Limitations
+
+- The 4B model can hallucinate on specialized domains.
+- No live information; recency is limited to the training data.
+- No published cross-language Swahili benchmark; the release suite covers Swahili identity and code-switching.
+- Q4_K_M has not been re-evaluated; expect 1–3 points vs fp16 on short-form evals.
+- Reasoning tags (`<think>`) may leak into visible output; strip them in post-processing.
+- Inherited Qwen/Qwen3.5-4B biases; not externally red-teamed.
+
+## Contact
+
+- Zabibu Technika, Nairobi, Kenya
+- https://zabibu.vercel.app/contact
