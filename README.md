@@ -14,6 +14,13 @@ Fikra.
   ZeroGPU Space (`zabibutechnikaacc/fikra-model-2-demo`). The model runs on the
   Space, not on the visitor's device. The same chat is embedded on the main page
   at `#chat`.
+- `sites/fikra/run/` — the beginner offline guide at
+  <https://zabibufikra.vercel.app/run/>. Windows, macOS, Linux, Android, and
+  iPhone/iPad tabs, tick-off checklists, direct GGUF download links, offline
+  testing, and troubleshooting.
+- Brand assets live in `sites/fikra/assets/`: `brand-dark.png`, `brand-light.png`,
+  `fikra-heart.svg`, and `fikra-heart-paper.svg`. The palette is red `#e8402a`,
+  ink, paper, and grey.
 - `sites/fikra/api/space.js` — the Vercel function that proxies `/api/space/*`
   to the Space with the `HF_TOKEN` environment variable. `api/warm.js` keeps the
   Space awake with a daily Vercel cron. Set `HF_TOKEN` in the Vercel project

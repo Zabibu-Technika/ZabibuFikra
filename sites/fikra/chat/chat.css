@@ -16,7 +16,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image: radial-gradient(rgba(242, 240, 233, 0.4) 1.3px, transparent 1.4px);
+  background-image: radial-gradient(rgba(244, 241, 234, 0.4) 1.3px, transparent 1.4px);
   background-size: 16px 16px;
   opacity: 0.22;
   -webkit-mask-image: radial-gradient(circle at 82% 30%, #000 0%, transparent 64%);
@@ -38,7 +38,7 @@
 
 .chat-hero .lead {
   max-width: 64ch;
-  color: rgba(242, 240, 233, 0.88);
+  color: rgba(244, 241, 234, 0.88);
 }
 
 .chat-hero .lead strong { color: var(--paper); font-weight: 600; }
@@ -48,7 +48,7 @@
   flex-wrap: wrap;
   gap: 10px 22px;
   margin-top: 26px;
-  color: rgba(242, 240, 233, 0.82);
+  color: rgba(244, 241, 234, 0.82);
   font-family: var(--mono);
   font-size: 9.5px;
   letter-spacing: 0.08em;
@@ -192,7 +192,7 @@
 
 .msg-bot .bubble.error {
   border: 1px solid rgba(5, 5, 7, 0.28);
-  background: #f7d4ff;
+  background: #ffe3dd;
 }
 
 .typing {
@@ -301,7 +301,7 @@
 }
 
 .chat-status[data-state="busy"] { color: var(--blue); }
-.chat-status[data-state="error"] { color: #a0175b; }
+.chat-status[data-state="error"] { color: var(--red-deep); }
 
 .chat-noscript {
   margin: 0;
@@ -418,7 +418,7 @@
   margin: 0 clamp(18px, 3vw, 28px) 14px;
   padding: 14px 16px;
   border: 1px solid rgba(5, 5, 7, 0.25);
-  background: #f7d4ff;
+  background: #ffe3dd;
   color: var(--ink);
 }
 
@@ -541,7 +541,7 @@
 
 .limits-cta p {
   margin: 0;
-  color: rgba(242, 240, 233, 0.78);
+  color: rgba(244, 241, 234, 0.78);
   font-size: 13.5px;
   line-height: 1.6;
 }
@@ -585,3 +585,16 @@
   .typing span { animation: none; opacity: 0.6; }
   .chat-log { scroll-behavior: auto; }
 }
+
+/* ---------- contrast fixes for the red / paper palette ---------- */
+
+.chat-hero { color: #fff; }
+.chat-hero .lead { color: rgba(255, 255, 255, 0.94); }
+.chat-hero-facts { color: rgba(255, 255, 255, 0.92); }
+.chat-hero .btn-outline-light { color: #fff; border-color: rgba(255, 255, 255, 0.7); }
+.chat-hero .btn-outline-light:hover { border-color: #fff; background: rgba(255, 255, 255, 0.12); }
+
+.chat-notice strong { color: var(--red-deep); }
+.how-grid .n { color: var(--red-deep); }
+.msg-user .bubble { background: var(--red-deep); color: var(--paper); }
+.chat-status[data-state="busy"] { color: var(--red-deep); }

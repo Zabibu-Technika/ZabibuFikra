@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Run Fikra offline — beginner guide for Windows, macOS, Linux, Android, and iPhone/iPad</title>
+<meta name="description" content="A no-terminal, step-by-step guide to downloading and running Zabibu Fikra Model 2 – 4B offline on Windows, macOS, Linux, Android, and iPhone/iPad. Tick off each step.">
+<meta name="theme-color" content="#050507">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="canonical" href="https://zabibufikra.vercel.app/run/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Zabibu Technika">
+<meta name="application-name" content="Zabibu Fikra">
+<meta name="keywords" content="run Fikra offline, run LLM on phone, run GGUF on Android, run GGUF on iPhone, LM Studio tutorial, PocketPal AI, local AI guide, Fikra Model 2">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable summary">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Zabibu Fikra">
+<meta property="og:title" content="Run Fikra offline — beginner guide for desktop and mobile">
+<meta property="og:description" content="Download the app, download the model, import it, and chat offline. Step-by-step for Windows, macOS, Linux, Android, and iPhone/iPad.">
+<meta property="og:url" content="https://zabibufikra.vercel.app/run/">
+<meta property="og:image" content="https://zabibufikra.vercel.app/assets/og-run.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Run Fikra offline — a beginner's guide for desktop and mobile">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Run Fikra offline — beginner guide for desktop and mobile">
+<meta name="twitter:description" content="Download the app, download the model, import it, and chat offline. Step-by-step for Windows, macOS, Linux, Android, and iPhone/iPad.">
+<meta name="twitter:image" content="https://zabibufikra.vercel.app/assets/og-run.png">
+<meta name="twitter:image:alt" content="Run Fikra offline — a beginner's guide for desktop and mobile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="run.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://zabibu.vercel.app/#organization",
+      "name": "Zabibu Technika",
+      "url": "https://zabibu.vercel.app",
+      "logo": "https://zabibufikra.vercel.app/assets/icon-512.png",
+      "foundingLocation": { "@type": "Place", "name": "Nairobi, Kenya" },
+      "sameAs": [
+        "https://huggingface.co/zabibutechnika",
+        "https://github.com/Zabibu-Technika"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zabibufikra.vercel.app/#website",
+      "url": "https://zabibufikra.vercel.app/",
+      "name": "Zabibu Fikra",
+      "publisher": { "@id": "https://zabibu.vercel.app/#organization" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://zabibufikra.vercel.app/run/#webpage",
+      "url": "https://zabibufikra.vercel.app/run/",
+      "name": "Run Fikra offline",
+      "description": "A beginner's step-by-step guide to running Zabibu Fikra Model 2 – 4B offline on Windows, macOS, Linux, Android, and iPhone/iPad.",
+      "isPartOf": { "@id": "https://zabibufikra.vercel.app/#website" },
+      "publisher": { "@id": "https://zabibu.vercel.app/#organization" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://zabibufikra.vercel.app/run/#breadcrumbs",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Fikra", "item": "https://zabibufikra.vercel.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Run it offline", "item": "https://zabibufikra.vercel.app/run/" }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://zabibufikra.vercel.app/run/#howto",
+      "name": "Run Zabibu Fikra Model 2 – 4B offline",
+      "description": "Download the app, download the model, import it, and chat offline without a terminal.",
+      "totalTime": "PT15M",
+      "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+      "supply": [
+        { "@type": "HowToSupply", "name": "A computer or phone with at least 6 GB RAM" },
+        { "@type": "HowToSupply", "name": "3.5 GB of free storage" },
+        { "@type": "HowToSupply", "name": "A one-time internet connection" }
+      ],
+      "tool": [
+        { "@type": "HowToTool", "name": "LM Studio for Windows, macOS, or Linux" },
+        { "@type": "HowToTool", "name": "PocketPal AI for Android, iPhone, or iPad" }
+      ],
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Check your device", "text": "You need 3.5 GB free storage and at least 6 GB RAM on a phone or 8 GB on a computer. 8 GB on a phone and 16 GB on a computer are comfortable." },
+        { "@type": "HowToStep", "position": 2, "name": "Install the app", "text": "On Windows, macOS, or Linux install LM Studio. On Android, iPhone, or iPad install PocketPal AI. Both are free and do not require an account." },
+        { "@type": "HowToStep", "position": 3, "name": "Download the model", "text": "Download Fikra Model 2 – 4B Q4_K_M (2.71 GB) from this page. The file ends in .gguf." },
+        { "@type": "HowToStep", "position": 4, "name": "Import the model", "text": "Open the app's Models screen and import or drag in the .gguf file. Do not unzip it." },
+        { "@type": "HowToStep", "position": 5, "name": "Load and chat", "text": "Select the model, set the context length to 4096, load it, and ask 'Who are you?'." },
+        { "@type": "HowToStep", "position": 6, "name": "Test offline mode", "text": "Turn on Airplane Mode or disconnect Wi-Fi and send another message. If it replies, it is running locally." }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://zabibufikra.vercel.app/run/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "The app says the model is not supported.",
+          "acceptedAnswer": { "@type": "Answer", "text": "Update the app to the latest version. Fikra Model 2 uses a recent Qwen3.5 architecture; older app builds may not load it. If it still fails, try Model 1 – 2B or LM Studio on a computer." }
+        },
+        {
+          "@type": "Question",
+          "name": "The app crashes or says out of memory.",
+          "acceptedAnswer": { "@type": "Answer", "text": "Close other apps, set the context length to 2048 or 4096, and try again. A 4B model needs memory headroom. On a phone with 4 GB RAM, use the online demo instead." }
+        },
+        {
+          "@type": "Question",
+          "name": "It is very slow.",
+          "acceptedAnswer": { "@type": "Answer", "text": "That is normal on a CPU. Expect a few words per second on a phone. Lower the context length, close other apps, or use a computer with a GPU for faster replies." }
+        },
+        {
+          "@type": "Question",
+          "name": "The model file will not import.",
+          "acceptedAnswer": { "@type": "Answer", "text": "Check that the download finished and the file ends in .gguf. Do not unzip it. Import it from the app's Models screen, or restart the app and try again." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it need internet?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Only for the one-time download. After the app and model are installed, turn on Airplane Mode and it still works." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data private?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The model runs on your device and your prompts and replies stay there. The app may check for updates, but the conversation is not sent to a server." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use it commercially?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Fikra Model 2 is Apache 2.0. Fikra Model 1 uses the Zabibu Technika License 1.1; review it before commercial use." }
+        },
+        {
+          "@type": "Question",
+          "name": "My phone has 4 GB RAM. Can I run it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not comfortably. A 4B model needs more headroom. Use the online chat demo or run Fikra on a computer." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../">
+      <img class="brand-logo" src="../assets/brand-dark.png" alt="Zabibu Fikra">
+      <span class="brand-tag">RUN IT</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../#model-2">Model 2</a>
+      <a href="../#benchmarks">Benchmarks</a>
+      <a href="../#model-1">Model 1</a>
+      <a href="./" aria-current="page">Run it</a>
+      <a href="../chat/">Chat</a>
+      <a href="../runtime/">Edge Runtime</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-paper btn-sm" href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B">Get Model 2 <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="run-hero">
+    <div class="wrap">
+      <span class="coming available">BEGINNER GUIDE / NO TERMINAL</span>
+      <h1>Run Fikra <span class="pink-text">offline.</span></h1>
+      <p class="lead">
+        A step-by-step guide for Windows, macOS, Linux, Android, and iPhone/iPad.
+        You will download two things: an app and the model. Every step is on this page.
+      </p>
+      <div class="run-facts">
+        <span>2.71 GB model</span>
+        <span>6 GB RAM minimum</span>
+        <span>8 GB recommended</span>
+        <span>Works offline</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-paper" href="#device">Choose your device <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-outline-light" href="#download">Download the model</a>
+      </div>
+      <p class="run-note">No account · no terminal · no cloud. You only need internet for the download.</p>
+    </div>
+  </section>
+
+  <section class="run-intro">
+    <div class="wrap">
+      <p class="eyebrow">Before you start</p>
+      <h2>Three things to check.</h2>
+      <div class="need-grid">
+        <article class="need-card">
+          <span class="need-n">01</span>
+          <h3>3.5 GB free storage</h3>
+          <p>The model file is 2.71 GB. The app needs a little more. Clear space before you download.</p>
+        </article>
+        <article class="need-card">
+          <span class="need-n">02</span>
+          <h3>Enough memory</h3>
+          <p>6 GB RAM on a phone, 8 GB on a computer. 8 GB on a phone and 16 GB on a computer are comfortable.</p>
+        </article>
+        <article class="need-card">
+          <span class="need-n">03</span>
+          <h3>One-time internet</h3>
+          <p>You need the internet to download the app and the model. After that, Fikra runs offline.</p>
+        </article>
+      </div>
+
+      <div class="model-table-wrap">
+        <table class="model-table">
+          <thead>
+            <tr><th>Your device</th><th>Memory</th><th>What to use</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Windows / Linux / macOS</td><td>8 GB</td><td>Fikra Model 2, 4k context</td></tr>
+            <tr><td>Windows / Linux / macOS</td><td>16 GB+</td><td>Fikra Model 2, 8k context</td></tr>
+            <tr><td>Android / iPhone / iPad</td><td>6 GB</td><td>Fikra Model 2, 4k context; close other apps</td></tr>
+            <tr><td>Android / iPhone / iPad</td><td>8 GB+</td><td>Fikra Model 2, 4k–8k context</td></tr>
+            <tr><td>Any phone</td><td>4 GB or less</td><td>Use the <a href="../chat/">online demo</a> instead</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine">
+        Fikra Model 2 is Apache 2.0. If your app cannot load it, there is a Model 1 fallback
+        in the <a href="#download">download section</a>.
+      </p>
+    </div>
+  </section>
+
+  <section id="device" class="run-device">
+    <div class="wrap">
+      <p class="eyebrow">Step 1 / pick your device</p>
+      <h2>Where are you running it?</h2>
+      <p class="lead">
+        Pick your device. The steps below are written for a first-time setup. You can tick
+        each step off as you go.
+      </p>
+
+      <div class="device-tabs" role="tablist" aria-label="Choose your device">
+        <button role="tab" id="tab-windows" aria-controls="panel-windows" aria-selected="true" data-os="windows" tabindex="0">Windows</button>
+        <button role="tab" id="tab-macos" aria-controls="panel-macos" aria-selected="false" data-os="macos" tabindex="-1">macOS</button>
+        <button role="tab" id="tab-linux" aria-controls="panel-linux" aria-selected="false" data-os="linux" tabindex="-1">Linux</button>
+        <button role="tab" id="tab-android" aria-controls="panel-android" aria-selected="false" data-os="android" tabindex="-1">Android</button>
+        <button role="tab" id="tab-ios" aria-controls="panel-ios" aria-selected="false" data-os="ios" tabindex="-1">iPhone / iPad</button>
+      </div>
+
+      <section class="os-panel" id="panel-windows" role="tabpanel" aria-labelledby="tab-windows" data-os-panel="windows" tabindex="0">
+        <div class="os-head">
+          <div>
+            <h3>Windows 10 or 11</h3>
+            <p class="os-need">You need: 8 GB RAM minimum · 3.5 GB free storage · LM Studio</p>
+          </div>
+          <span class="os-tag">NO TERMINAL</span>
+        </div>
+        <div class="run-progress">
+          <div class="run-progress-track"><span data-bar></span></div>
+          <span class="run-progress-label" data-count>0 of 7 steps</span>
+        </div>
+        <div class="step-list">
+          <label class="step"><input type="checkbox" data-step="win-1"><span class="step-body"><strong>Check your memory.</strong> Open Start → Settings → System → About and look at “Installed RAM”. You want 8 GB minimum; 16 GB is comfortable.</span></label>
+          <label class="step"><input type="checkbox" data-step="win-2"><span class="step-body"><strong>Install LM Studio.</strong> Click “Download LM Studio”, run the installer, and open LM Studio.</span></label>
+          <label class="step"><input type="checkbox" data-step="win-3"><span class="step-body"><strong>Download the model.</strong> Click “Download Fikra Model 2 (2.71 GB)”. Save it in your Downloads folder and wait for it to finish.</span></label>
+          <label class="step"><input type="checkbox" data-step="win-4"><span class="step-body"><strong>Import the model.</strong> In LM Studio, open “My Models” and drag the <code>.gguf</code> file into the window. If drag-and-drop does not work, click the folder icon to open the models folder and move the file there.</span></label>
+          <label class="step"><input type="checkbox" data-step="win-5"><span class="step-body"><strong>Load it.</strong> Go to “Chat”, select “Fikra-Model-2-4B-Q4_K_M” at the top, set context length to 4096 (or 8192 with 16 GB RAM), and click “Load”.</span></label>
+          <label class="step"><input type="checkbox" data-step="win-6"><span class="step-body"><strong>Say hello.</strong> Type “Who are you?” and press Enter. The first reply may take a few seconds.</span></label>
+          <label class="step"><input type="checkbox" data-step="win-7"><span class="step-body"><strong>Test offline.</strong> Turn off Wi-Fi or unplug your network cable, then send another message. If it replies, you are running offline.</span></label>
+        </div>
+        <div class="run-actions">
+          <a class="btn btn-blue" href="https://lmstudio.ai/" target="_blank" rel="noopener">Download LM Studio <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline-dark" href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF/resolve/main/Fikra-Model-2-4B-Q4_K_M.gguf?download=true" target="_blank" rel="noopener">Download Fikra Model 2 (2.71 GB)</a>
+          <button class="step-reset" type="button" data-reset>Reset steps</button>
+        </div>
+      </section>
+
+      <section class="os-panel" id="panel-macos" role="tabpanel" aria-labelledby="tab-macos" data-os-panel="macos" tabindex="0">
+        <div class="os-head">
+          <div>
+            <h3>macOS</h3>
+            <p class="os-need">You need: 8 GB memory minimum · 3.5 GB free storage · LM Studio</p>
+          </div>
+          <span class="os-tag">NO TERMINAL</span>
+        </div>
+        <div class="run-progress">
+          <div class="run-progress-track"><span data-bar></span></div>
+          <span class="run-progress-label" data-count>0 of 7 steps</span>
+        </div>
+        <div class="step-list">
+          <label class="step"><input type="checkbox" data-step="mac-1"><span class="step-body"><strong>Check your memory.</strong> Open the Apple menu → About This Mac. You want 8 GB minimum; 16 GB or more is comfortable. Apple Silicon (M1 or newer) is recommended.</span></label>
+          <label class="step"><input type="checkbox" data-step="mac-2"><span class="step-body"><strong>Install LM Studio.</strong> Download the macOS version, open the <code>.dmg</code>, drag LM Studio to Applications, and open it. If macOS blocks it, right-click the app and choose Open.</span></label>
+          <label class="step"><input type="checkbox" data-step="mac-3"><span class="step-body"><strong>Download the model.</strong> Click “Download Fikra Model 2 (2.71 GB)” and wait for the file to finish in Downloads.</span></label>
+          <label class="step"><input type="checkbox" data-step="mac-4"><span class="step-body"><strong>Import the model.</strong> In LM Studio, open “My Models” and drag the <code>.gguf</code> file into the window. If that does not work, use the folder icon to open the models folder and move the file there.</span></label>
+          <label class="step"><input type="checkbox" data-step="mac-5"><span class="step-body"><strong>Load it.</strong> Go to “Chat”, select the Fikra model, set context length to 4096 on an 8 GB Mac or 8192 on 16 GB+, and click “Load”.</span></label>
+          <label class="step"><input type="checkbox" data-step="mac-6"><span class="step-body"><strong>Say hello.</strong> Type “Who are you?” and press Enter.</span></label>
+          <label class="step"><input type="checkbox" data-step="mac-7"><span class="step-body"><strong>Test offline.</strong> Turn off Wi-Fi, then send another message. If it replies, you are running offline.</span></label>
+        </div>
+        <div class="run-actions">
+          <a class="btn btn-blue" href="https://lmstudio.ai/" target="_blank" rel="noopener">Download LM Studio <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline-dark" href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF/resolve/main/Fikra-Model-2-4B-Q4_K_M.gguf?download=true" target="_blank" rel="noopener">Download Fikra Model 2 (2.71 GB)</a>
+          <button class="step-reset" type="button" data-reset>Reset steps</button>
+        </div>
+        <p class="os-note">On an 8 GB Mac, close memory-heavy apps and use 4096 context. On Apple Silicon, LM Studio can use the GPU automatically.</p>
+      </section>
+
+      <section class="os-panel" id="panel-linux" role="tabpanel" aria-labelledby="tab-linux" data-os-panel="linux" tabindex="0">
+        <div class="os-head">
+          <div>
+            <h3>Linux</h3>
+            <p class="os-need">You need: 8 GB RAM minimum · 3.5 GB free storage · LM Studio AppImage</p>
+          </div>
+          <span class="os-tag">NO TERMINAL</span>
+        </div>
+        <div class="run-progress">
+          <div class="run-progress-track"><span data-bar></span></div>
+          <span class="run-progress-label" data-count>0 of 7 steps</span>
+        </div>
+        <div class="step-list">
+          <label class="step"><input type="checkbox" data-step="linux-1"><span class="step-body"><strong>Check your memory.</strong> Open Settings → About, or run <code>free -h</code>. You want 8 GB minimum; 16 GB is comfortable.</span></label>
+          <label class="step"><input type="checkbox" data-step="linux-2"><span class="step-body"><strong>Download LM Studio.</strong> Get the Linux AppImage from the LM Studio site. It is a single file, not an installer.</span></label>
+          <label class="step"><input type="checkbox" data-step="linux-3"><span class="step-body"><strong>Allow it to run.</strong> In Files, right-click the <code>.AppImage</code> → Properties → Permissions → enable “Allow executing file as program”, then double-click it. If your desktop cannot run AppImages, use Jan (jan.ai) or the terminal section below.</span></label>
+          <label class="step"><input type="checkbox" data-step="linux-4"><span class="step-body"><strong>Download the model.</strong> Click “Download Fikra Model 2 (2.71 GB)” and wait for the file to finish.</span></label>
+          <label class="step"><input type="checkbox" data-step="linux-5"><span class="step-body"><strong>Import the model.</strong> In LM Studio, open “My Models” and drag the <code>.gguf</code> file in.</span></label>
+          <label class="step"><input type="checkbox" data-step="linux-6"><span class="step-body"><strong>Load and say hello.</strong> Open “Chat”, select the Fikra model, set context to 4096 or 8192, click “Load”, and ask “Who are you?”.</span></label>
+          <label class="step"><input type="checkbox" data-step="linux-7"><span class="step-body"><strong>Test offline.</strong> Disconnect Wi-Fi or Ethernet, then send another message.</span></label>
+        </div>
+        <div class="run-actions">
+          <a class="btn btn-blue" href="https://lmstudio.ai/" target="_blank" rel="noopener">Download LM Studio <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline-dark" href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF/resolve/main/Fikra-Model-2-4B-Q4_K_M.gguf?download=true" target="_blank" rel="noopener">Download Fikra Model 2 (2.71 GB)</a>
+          <button class="step-reset" type="button" data-reset>Reset steps</button>
+        </div>
+      </section>
+
+      <section class="os-panel" id="panel-android" role="tabpanel" aria-labelledby="tab-android" data-os-panel="android" tabindex="0">
+        <div class="os-head">
+          <div>
+            <h3>Android phone or tablet</h3>
+            <p class="os-need">You need: 6 GB RAM minimum · 3.5 GB free storage · PocketPal AI</p>
+          </div>
+          <span class="os-tag">NO ACCOUNT</span>
+        </div>
+        <div class="run-progress">
+          <div class="run-progress-track"><span data-bar></span></div>
+          <span class="run-progress-label" data-count>0 of 7 steps</span>
+        </div>
+        <div class="step-list">
+          <label class="step"><input type="checkbox" data-step="android-1"><span class="step-body"><strong>Check your phone.</strong> Open Settings → About phone and look at RAM, then Settings → Storage. You want 6 GB RAM minimum and 3.5 GB free space. 8 GB RAM is comfortable.</span></label>
+          <label class="step"><input type="checkbox" data-step="android-2"><span class="step-body"><strong>Install PocketPal AI.</strong> Open Google Play and install PocketPal AI. It is free and does not need an account.</span></label>
+          <label class="step"><input type="checkbox" data-step="android-3"><span class="step-body"><strong>Download the model.</strong> Tap “Download Fikra Model 2 (2.71 GB)”. Keep the screen on and use Wi-Fi. The file goes to Downloads.</span></label>
+          <label class="step"><input type="checkbox" data-step="android-4"><span class="step-body"><strong>Import the model.</strong> Open PocketPal → menu (☰) → Models → “+” → “Import from device” → Downloads → select the <code>.gguf</code> file.</span></label>
+          <label class="step"><input type="checkbox" data-step="android-5"><span class="step-body"><strong>Load it.</strong> Tap the model, choose “Load”, and set context to 4096. Leave GPU offload on automatic if the app offers it.</span></label>
+          <label class="step"><input type="checkbox" data-step="android-6"><span class="step-body"><strong>Say hello.</strong> Start a new chat and ask “Who are you?”.</span></label>
+          <label class="step"><input type="checkbox" data-step="android-7"><span class="step-body"><strong>Test offline.</strong> Turn on Airplane Mode, then send another message. If it replies, it is running on your phone.</span></label>
+        </div>
+        <div class="run-actions">
+          <a class="btn btn-blue" href="https://play.google.com/store/apps/details?id=com.pocketpalai" target="_blank" rel="noopener">Get PocketPal on Google Play <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline-dark" href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF/resolve/main/Fikra-Model-2-4B-Q4_K_M.gguf?download=true" target="_blank" rel="noopener">Download Fikra Model 2 (2.71 GB)</a>
+          <button class="step-reset" type="button" data-reset>Reset steps</button>
+        </div>
+        <p class="os-note">If PocketPal does not load the model, try ChatterUI (Android) or use a computer. A 4 GB phone should use the online demo instead.</p>
+      </section>
+
+      <section class="os-panel" id="panel-ios" role="tabpanel" aria-labelledby="tab-ios" data-os-panel="ios" tabindex="0">
+        <div class="os-head">
+          <div>
+            <h3>iPhone or iPad</h3>
+            <p class="os-need">You need: 6 GB RAM minimum · 3.5 GB free storage · PocketPal AI</p>
+          </div>
+          <span class="os-tag">NO ACCOUNT</span>
+        </div>
+        <div class="run-progress">
+          <div class="run-progress-track"><span data-bar></span></div>
+          <span class="run-progress-label" data-count>0 of 7 steps</span>
+        </div>
+        <div class="step-list">
+          <label class="step"><input type="checkbox" data-step="ios-1"><span class="step-body"><strong>Check your device.</strong> Open Settings → General → About. Recent Pro iPhones and iPads have 8 GB; many have 6 GB. You also need 3.5 GB free in Settings → General → iPhone Storage. With 4 GB, use the online demo instead.</span></label>
+          <label class="step"><input type="checkbox" data-step="ios-2"><span class="step-body"><strong>Install PocketPal AI.</strong> Open the App Store and install PocketPal AI. It is free and does not need an account.</span></label>
+          <label class="step"><input type="checkbox" data-step="ios-3"><span class="step-body"><strong>Download the model in Safari.</strong> Tap “Download Fikra Model 2 (2.71 GB)”. When Safari asks where to save, choose Downloads (in the Files app). Keep the tab open until it finishes.</span></label>
+          <label class="step"><input type="checkbox" data-step="ios-4"><span class="step-body"><strong>Import the model.</strong> Open PocketPal → menu → Models → “+” → “Import from device” → Files → Downloads → select the <code>.gguf</code> file.</span></label>
+          <label class="step"><input type="checkbox" data-step="ios-5"><span class="step-body"><strong>Load it.</strong> Tap the model → “Load”, and set context to 4096. Close other apps first; iOS gives apps less memory than the spec sheet suggests.</span></label>
+          <label class="step"><input type="checkbox" data-step="ios-6"><span class="step-body"><strong>Say hello.</strong> Start a new chat and ask “Who are you?”.</span></label>
+          <label class="step"><input type="checkbox" data-step="ios-7"><span class="step-body"><strong>Test offline.</strong> Open Control Center, turn on Airplane Mode, then send another message.</span></label>
+        </div>
+        <div class="run-actions">
+          <a class="btn btn-blue" href="https://apps.apple.com/us/app/pocketpal-ai/id6502579498" target="_blank" rel="noopener">Get PocketPal on the App Store <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline-dark" href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF/resolve/main/Fikra-Model-2-4B-Q4_K_M.gguf?download=true" target="_blank" rel="noopener">Download Fikra Model 2 (2.71 GB)</a>
+          <button class="step-reset" type="button" data-reset>Reset steps</button>
+        </div>
+        <p class="os-note">If the app closes while loading, close other apps, set context to 2048, and try again. On a 4 GB iPhone or iPad, use the online demo or a computer.</p>
+      </section>
+    </div>
+  </section>
+
+  <section id="download" class="run-download">
+    <div class="wrap">
+      <p class="eyebrow">Step 2 / download the model</p>
+      <h2>Download the model file.</h2>
+      <p class="lead">
+        This is the only large download. The same <code>.gguf</code> file works on every
+        device in the steps above.
+      </p>
+
+      <div class="download-grid">
+        <article class="download-card primary">
+          <span class="download-tag">RECOMMENDED</span>
+          <h3>Fikra Model 2 – 4B</h3>
+          <p class="download-desc">Best quality and the smallest file. Apache 2.0. Use this unless your app cannot load it.</p>
+          <ul class="download-specs">
+            <li>2.71 GB · Q4_K_M</li>
+            <li>4B parameters · 262k context</li>
+            <li>English and Swahili</li>
+            <li>Works with LM Studio and PocketPal</li>
+          </ul>
+          <a class="btn btn-blue" href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF/resolve/main/Fikra-Model-2-4B-Q4_K_M.gguf?download=true" target="_blank" rel="noopener">Download Model 2 (2.71 GB) <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="download-card">
+          <span class="download-tag muted">FALLBACK</span>
+          <h3>Fikra Model 1 – 2B</h3>
+          <p class="download-desc">Older and larger. Use only if Model 2 will not load because your app does not support the newer architecture.</p>
+          <ul class="download-specs">
+            <li>3.43 GB · Q4_K_M</li>
+            <li>2B class · 131k context</li>
+            <li>English and Swahili</li>
+            <li>Custom license; check before commercial use</li>
+          </ul>
+          <a class="btn btn-outline-dark" href="https://huggingface.co/mradermacher/Zabibu-Fikra-2B-GGUF/resolve/main/Zabibu-Fikra-2B.Q4_K_M.gguf?download=true" target="_blank" rel="noopener">Download Model 1 (3.43 GB) <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+
+      <div class="gguf-note">
+        <strong>What is a GGUF?</strong>
+        <p>It is the model file format used by local AI apps. Think of it as a PDF for an AI model. You do not open it directly; you import it into the app. Keep the <code>.gguf</code> ending and do not unzip it.</p>
+      </div>
+
+      <p class="fine">
+        The file is large. Use Wi-Fi, keep the screen on, and wait for the download to finish.
+        If it stops, start it again. The model is also on
+        <a href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF">Hugging Face</a>.
+      </p>
+    </div>
+  </section>
+
+  <section id="offline" class="run-offline">
+    <div class="wrap">
+      <p class="eyebrow">Step 3 / prove it</p>
+      <h2>Test that it is really offline.</h2>
+      <div class="offline-grid">
+        <article class="offline-card">
+          <span class="offline-n">01</span>
+          <h3>Disconnect</h3>
+          <p>Turn on Airplane Mode on your phone, or turn off Wi-Fi and unplug Ethernet on your computer.</p>
+        </article>
+        <article class="offline-card">
+          <span class="offline-n">02</span>
+          <h3>Send a message</h3>
+          <p>Open the app, make sure the Fikra model is loaded, and ask “Who are you?”.</p>
+        </article>
+        <article class="offline-card">
+          <span class="offline-n">03</span>
+          <h3>See the reply</h3>
+          <p>If it answers while disconnected, the model is running on your device. That is the whole point.</p>
+        </article>
+      </div>
+      <p class="offline-note">If it does not reply, check that you loaded the local model, not an online or cloud model.</p>
+    </div>
+  </section>
+
+  <section id="troubleshooting" class="run-trouble">
+    <div class="wrap">
+      <p class="eyebrow">Troubleshooting / quick fixes</p>
+      <h2>If something goes wrong.</h2>
+      <div class="trouble-grid">
+        <article class="trouble-item">
+          <h3>The app says the model is not supported.</h3>
+          <p>Update the app to the latest version. Fikra Model 2 uses a recent Qwen3.5 architecture; older app builds may not load it. If it still fails, try Model 1 – 2B or LM Studio on a computer.</p>
+        </article>
+        <article class="trouble-item">
+          <h3>The app crashes or says out of memory.</h3>
+          <p>Close other apps, set the context length to 2048 or 4096, and try again. A 4B model needs memory headroom. On a phone with 4 GB RAM, use the online demo instead.</p>
+        </article>
+        <article class="trouble-item">
+          <h3>It is very slow.</h3>
+          <p>That is normal on a CPU. Expect a few words per second on a phone. Lower the context length, close other apps, or use a computer with a GPU for faster replies.</p>
+        </article>
+        <article class="trouble-item">
+          <h3>The model file will not import.</h3>
+          <p>Check that the download finished and the file ends in <code>.gguf</code>. Do not unzip it. Import it from the app's Models screen, or restart the app and try again.</p>
+        </article>
+        <article class="trouble-item">
+          <h3>Does it need internet?</h3>
+          <p>Only for the one-time download. After the app and model are installed, turn on Airplane Mode and it still works.</p>
+        </article>
+        <article class="trouble-item">
+          <h3>Is my data private?</h3>
+          <p>Yes. The model runs on your device and your prompts and replies stay there. The app may check for updates, but the conversation is not sent to a server.</p>
+        </article>
+        <article class="trouble-item">
+          <h3>Can I use it commercially?</h3>
+          <p>Fikra Model 2 is Apache 2.0. Fikra Model 1 uses the Zabibu Technika License 1.1; review it before commercial use.</p>
+        </article>
+        <article class="trouble-item">
+          <h3>My phone has 4 GB RAM. Can I run it?</h3>
+          <p>Not comfortably. A 4B model needs more headroom. Use the online chat demo or run Fikra on a computer.</p>
+        </article>
+      </div>
+      <p class="fine">Still stuck? <a href="https://zabibu.vercel.app/contact">Talk to us</a>.</p>
+    </div>
+  </section>
+
+  <section id="advanced" class="run-advanced">
+    <div class="wrap">
+      <p class="eyebrow">Optional / for developers</p>
+      <h2>Prefer the terminal?</h2>
+      <details class="advanced-box">
+        <summary>Show llama.cpp and Ollama commands</summary>
+        <p>You do not need any of this for the guide above. These commands are for people who already use a terminal.</p>
+        <h3>llama.cpp</h3>
+        <pre><code># 1. Download the model (macOS / Linux)
+curl -L -o Fikra-Model-2-4B-Q4_K_M.gguf \
+  "https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF/resolve/main/Fikra-Model-2-4B-Q4_K_M.gguf?download=true"
+
+# 2. Chat
+llama-cli -m Fikra-Model-2-4B-Q4_K_M.gguf -p "Who are you?" -c 4096</code></pre>
+        <h3>Ollama</h3>
+        <pre><code># Save this as Modelfile
+FROM ./Fikra-Model-2-4B-Q4_K_M.gguf
+PARAMETER num_ctx 4096
+
+# Create and run
+ollama create fikra -f Modelfile
+ollama run fikra</code></pre>
+        <p>Full developer commands are in the <a href="../#run">Run Model 2 section</a>.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="run-share">
+    <div class="wrap">
+      <div class="share-card">
+        <div>
+          <p class="eyebrow">Open on your phone</p>
+          <h2>Scan this guide.</h2>
+          <p>On a computer? Scan the code to open these steps on your phone. On a phone? You are already here.</p>
+          <button class="btn btn-blue" type="button" id="copy-run-link">Copy link</button>
+        </div>
+        <div class="qr-wrap">
+          <img src="../assets/run-qr.png" alt="QR code to open the Fikra offline guide on a phone" width="185" height="185">
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/brand-dark.png" alt="Zabibu Fikra">
+        <p><strong>Fikra Model 2 – 4B.</strong> A Zabibu Technika model, made by Tehillah Kachila. Built in Nairobi for the machines people actually have.</p>
+        <p class="loc">Nairobi, Kenya / East Africa</p>
+      </div>
+      <div class="footer-col">
+        <h3>Model</h3>
+        <a href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B">Model 2 card</a>
+        <a href="https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF">GGUF repo</a>
+        <a href="https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B">Model 1 card</a>
+        <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>
+      </div>
+      <div class="footer-col">
+        <h3>Ecosystem</h3>
+        <a href="https://zabibuweaver.vercel.app">Weaver</a>
+        <a href="https://arifagent.vercel.app">Zabibu Arif</a>
+        <a href="https://zabibu.vercel.app">Zabibu Technika</a>
+      </div>
+      <div class="footer-col">
+        <h3>Build</h3>
+        <a href="https://github.com/Zabibu-Technika/ZabibuFikra">GitHub</a>
+        <a href="https://huggingface.co/zabibutechnika">Hugging Face</a>
+        <a href="../chat/">Talk to Fikra</a>
+        <a href="../#model-2">Fikra Model 2</a>
+        <a href="../runtime/">Edge Runtime</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Zabibu Technika. All rights reserved.</span>
+      <span class="mono">FIKRA MODEL 2 / 4B · DESIGNED FROM NAIROBI</span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="run.js"></script>
+</body>
+</html>
