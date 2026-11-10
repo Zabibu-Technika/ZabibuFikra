@@ -19,8 +19,12 @@ Fikra.
   iPhone/iPad tabs, tick-off checklists, direct GGUF download links, offline
   testing, and troubleshooting.
 - Brand assets live in `sites/fikra/assets/`: `brand-dark.png`, `brand-light.png`,
-  `fikra-heart.svg`, and `fikra-heart-paper.svg`. The palette is red `#e8402a`,
-  ink, paper, and grey.
+  `brand-on-red.png`, `fikra-heart.svg`, and `fikra-heart-paper.svg`. The palette
+  is red `#e8402a`, ink, paper, and grey. The same folder also serves the media
+  kit page at <https://zabibufikra.vercel.app/assets/>, with wallpapers and social
+  templates under `wallpapers/` and `social/`.
+- `sites/fikra/downloads/` — the PDFs and ZIP bundles linked from the media kit:
+  brand kit, press kit, investor kit, wallpapers, social kit, and the full archive.
 - `sites/fikra/api/space.js` — the Vercel function that proxies `/api/space/*`
   to the Space with the `HF_TOKEN` environment variable. `api/warm.js` keeps the
   Space awake with a daily Vercel cron. Set `HF_TOKEN` in the Vercel project

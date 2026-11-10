@@ -108,6 +108,7 @@ The beginner guide with checklists and direct downloads is at https://zabibufikr
 - https://zabibufikra.vercel.app/ — model card and benchmarks
 - https://zabibufikra.vercel.app/chat/ — live chat demo and limits
 - https://zabibufikra.vercel.app/run/ — beginner offline setup guide
+- https://zabibufikra.vercel.app/assets/ — logos, press kit, investor overview, wallpapers, social kit
 - https://zabibufikra.vercel.app/runtime/ — Fikra Edge Runtime
 
 ## Contact

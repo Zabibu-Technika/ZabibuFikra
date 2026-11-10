@@ -22,6 +22,7 @@
 - [Fikra Model 2 – 4B](https://zabibufikra.vercel.app/): model card, capabilities, benchmarks, limitations, Model 1, and run instructions.
 - [Live chat demo](https://zabibufikra.vercel.app/chat/): desktop and mobile chat with the real model through a Hugging Face ZeroGPU Space, with limits and local-run fallbacks.
 - [Run Fikra offline](https://zabibufikra.vercel.app/run/): a beginner step-by-step guide for Windows, macOS, Linux, Android, and iPhone/iPad. Includes checklists, direct GGUF downloads, and offline testing.
+- [Assets & press kit](https://zabibufikra.vercel.app/assets/): downloadable logos, press kit, investor one-pager, fact sheet, wallpapers, social templates, badges, and digital merchandise.
 - [Fikra Edge Runtime](https://zabibufikra.vercel.app/runtime/): the commercial deployment layer for Fikra models.
 
 ## Weights and source
