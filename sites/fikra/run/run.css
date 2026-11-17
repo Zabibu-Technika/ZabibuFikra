@@ -73,6 +73,7 @@
 /* ---------- shared section shells ---------- */
 
 .run-intro,
+.run-mobile,
 .run-download,
 .run-trouble,
 .run-share {
@@ -483,6 +484,46 @@
   width: 100%;
   justify-content: center;
 }
+
+.download-note {
+  margin: 14px 0 0;
+  color: rgba(5, 5, 7, 0.72);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.download-note a {
+  color: var(--red-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.mobile-grid {
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+
+.mobile-grid .download-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-grid .download-card .btn { margin-top: auto; }
+
+.download-desc code {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  overflow-wrap: anywhere;
+}
+
+.mobile-apps {
+  margin: 24px 0 0;
+  color: rgba(5, 5, 7, 0.78);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.mobile-apps strong { color: var(--ink); }
 
 .gguf-note {
   margin-top: 24px;

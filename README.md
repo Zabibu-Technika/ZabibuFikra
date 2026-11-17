@@ -7,8 +7,10 @@ Fikra.
 
 - `index.html`, `style.css`, `assets/` — the public hub linking Weaver, Zabibu Arif, and Fikra.
 - `sites/fikra/` — the Fikra model-family site, deployed at
-  <https://zabibufikra.vercel.app>. It sells the released Zabibu Fikra Model 2 – 4B,
-  keeps Model 1 available, and teases the Fikra Edge Runtime.
+  <https://zabibufikra.vercel.app>. It sells the released Zabibu Fikra Model 2 – 4B
+  and Fikra Model 2 Micro, keeps Model 1 available, and teases the Fikra Edge Runtime.
+  Model 2 Micro is the 0.8B phone release: 2,048-token context, Q4_K_M 547 MB,
+  Q4_0 513 MB, Apache 2.0.
 - `sites/fikra/chat/` — the live demo at <https://zabibufikra.vercel.app/chat/>.
   Desktop and mobile both talk to Zabibu Fikra Model 2 – 4B through a public
   ZeroGPU Space (`zabibutechnikaacc/fikra-model-2-demo`). The model runs on the
@@ -16,8 +18,8 @@ Fikra.
   at `#chat`.
 - `sites/fikra/run/` — the beginner offline guide at
   <https://zabibufikra.vercel.app/run/>. Windows, macOS, Linux, Android, and
-  iPhone/iPad tabs, tick-off checklists, direct GGUF download links, offline
-  testing, and troubleshooting.
+  iPhone/iPad tabs, a phone-first Micro path at `#mobile`, tick-off checklists,
+  direct GGUF download links, offline testing, and troubleshooting.
 - Brand assets live in `sites/fikra/assets/`: `brand-dark.png`, `brand-light.png`,
   `brand-on-red.png`, `fikra-heart.svg`, and `fikra-heart-paper.svg`. The palette
   is red `#e8402a`, ink, paper, and grey. The same folder also serves the media

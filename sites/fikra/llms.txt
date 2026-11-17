@@ -15,13 +15,14 @@
 - fp16 weights: 8.43 GB
 - GGUF: Q4_K_M 2.71 GB, F16 8.42 GB
 - Benchmarks: MMLU 75.5%, HellaSwag 68.0%, Fikra release suite 91.3% (105/115), held-out paraphrases 90.0% (9/10)
-- Previous release: Zabibu Fikra Model 1 – 2B, 131,072-token context, Gemma-4-2B-it base, Zabibu Technika License 1.1
+- Mobile release: Zabibu Fikra Model 2 Micro, 0.8B parameters (772,845,888), 2,048-token context, Qwen/Qwen3.5-0.8B base, Apache 2.0, Q4_K_M 547 MB, Q4_0 513 MB, release 2026-11-16. Not benchmarked on MMLU/HellaSwag; evaluated on identity and release-suite categories only. Text-only.
+- Previous release: Zabibu Fikra Model 1 - 2B, 131,072-token context, Gemma-4-2B-it base, Zabibu Technika License 1.1
 
 ## Pages
 
-- [Fikra Model 2 – 4B](https://zabibufikra.vercel.app/): model card, capabilities, benchmarks, limitations, Model 1, and run instructions.
+- [Fikra Model 2 - 4B](https://zabibufikra.vercel.app/): model card, capabilities, benchmarks, limitations, Model 2 Micro, Model 1, and run instructions.
 - [Live chat demo](https://zabibufikra.vercel.app/chat/): desktop and mobile chat with the real model through a Hugging Face ZeroGPU Space, with limits and local-run fallbacks.
-- [Run Fikra offline](https://zabibufikra.vercel.app/run/): a beginner step-by-step guide for Windows, macOS, Linux, Android, and iPhone/iPad. Includes checklists, direct GGUF downloads, and offline testing.
+- [Run Fikra offline](https://zabibufikra.vercel.app/run/): a beginner step-by-step guide for Windows, macOS, Linux, Android, and iPhone/iPad. Includes a phone-first Micro path, checklists, direct GGUF downloads, and offline testing.
 - [Assets & press kit](https://zabibufikra.vercel.app/assets/): downloadable logos, press kit, investor one-pager, fact sheet, wallpapers, social templates, badges, and digital merchandise.
 - [Fikra Edge Runtime](https://zabibufikra.vercel.app/runtime/): the commercial deployment layer for Fikra models.
 
@@ -29,6 +30,7 @@
 
 - [Model 2 on Hugging Face](https://huggingface.co/zabibutechnika/Fikra-Model-2-4B)
 - [Model 2 GGUF](https://huggingface.co/zabibutechnika/Fikra-Model-2-4B-GGUF)
+- [Model 2 Micro GGUF](https://huggingface.co/zabibutechnika/Fikra-Model-2-Micro-GGUF)
 - [Model 1 on Hugging Face](https://huggingface.co/zabibutechnika/Zabibu-Fikra-2B)
 - [Source repository](https://github.com/Zabibu-Technika/ZabibuFikra)
 
@@ -40,6 +42,7 @@
 - Q4_K_M has not been re-evaluated; expect 1–3 points vs fp16 on short-form evals.
 - Reasoning tags (`<think>`) may leak into visible output; strip them in post-processing.
 - Inherited Qwen/Qwen3.5-4B biases; not externally red-teamed.
+- Micro gives up multi-step math, obscure world knowledge, and long-form generation. Use Model 2 – 4B for those.
 
 ## Contact
 

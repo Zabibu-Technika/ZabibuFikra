@@ -41,10 +41,29 @@ Public benchmarks (lm-evaluation-harness 0.4.13, 10 samples per task, fp16, Kagg
 | Model | Parameters | MMLU | HellaSwag |
 |---|---|---|---|
 | Fikra Model 2 – 4B | 4.2B | 75.5% | 68.0% |
+| Fikra Model 2 Micro | 0.8B | — | — |
 | Fikra Model 1 – 2B | 2B | 36.0% | 40.0% |
 | Qwen2.5-3B-Instruct | 3B | 68.8% | 40.0% |
 
-The numbers are not size-normalized. Most of the MMLU delta from Model 1 comes from the 2B to 4B base upgrade, not from Fikra training alone.
+The numbers are not size-normalized. Most of the MMLU delta from Model 1 comes from the 2B to 4B base upgrade, not from Fikra training alone. Micro was not benchmarked on MMLU/HellaSwag; it was evaluated on identity and release-suite categories only.
+
+## Fikra Model 2 Micro
+
+Fikra Model 2 Micro is the phone-first release: a 0.8B-parameter fine-tune of Qwen/Qwen3.5-0.8B built for phones and edge devices. It keeps the Fikra identity, Kenya-first knowledge, and Swahili/English code-switching of the 4B model at roughly 1/5 the memory footprint.
+
+- Release date: 2026-11-16
+- License: Apache 2.0
+- Base: Qwen/Qwen3.5-0.8B
+- Parameters: 772,845,888 (0.8B)
+- Context: 2,048 tokens
+- Languages: English, Swahili, English–Swahili code-switching
+- GGUF Q4_K_M: 547 MB
+- GGUF Q4_0: 513 MB
+- GGUF Q4_K_M imatrix: 547 MB
+- Text-only
+- MMLU and HellaSwag: not run; evaluated on identity and release-suite categories only
+- Limitations: gives up multi-step math, obscure world knowledge, and long-form generation. Use Model 2 – 4B for those.
+- GGUF: https://huggingface.co/zabibutechnika/Fikra-Model-2-Micro-GGUF
 
 ## Run
 
@@ -97,10 +116,11 @@ print(tok.decode(out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True
 The beginner guide with checklists and direct downloads is at https://zabibufikra.vercel.app/run/.
 
 - Desktop: LM Studio (Windows, macOS, Linux). Download the GGUF and drag it into LM Studio's My Models screen.
-- Mobile: PocketPal AI (Android, iPhone, iPad). Download the GGUF and import it from the Models screen.
-- Model 2 Q4_K_M: 2.71 GB, Apache 2.0, recommended.
+- Mobile: PocketPal AI (Android, iPhone, iPad) or ChatterUI (Android). Download the GGUF and import it from the Models screen.
+- Model 2 Q4_K_M: 2.71 GB, Apache 2.0, recommended on computers.
+- Model 2 Micro Q4_0: 513 MB, Apache 2.0, recommended on 4 GB phones; Q4_K_M is 547 MB.
 - Model 1 Q4_K_M: 3.43 GB, fallback for older apps that do not support the Qwen3.5 architecture.
-- Minimum memory: 6 GB on a phone, 8 GB on a computer. 8 GB phone / 16 GB computer recommended.
+- Minimum memory: 4 GB on a phone with Micro, 6 GB for the 4B model on a phone, 8 GB on a computer. 8 GB phone / 16 GB computer recommended.
 - The model runs fully offline after the one-time download.
 
 ## Pages
